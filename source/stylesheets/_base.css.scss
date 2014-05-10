@@ -1,0 +1,132 @@
+@import 'bourbon';
+@import '_elements';
+
+body {
+  background: #EEE
+}
+
+h2 {
+  color: #FFF;
+  font-family: 'Din Regular';
+  font-size: 2.25em; /* 36 / 16 */
+  line-height: 1.5em; /* 24 / 16 */
+  margin-bottom: .5em; /* 20 / 40 */
+  text-align: center;
+}
+
+h3 {
+  color: #FFF;
+  font-family: 'Din Medium';
+  font-size: 1.125em; /* 18 / 16 */
+  line-height: 1.333em; /* 24 / 18 */
+  text-align: center;
+}
+
+html {
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+footer {
+  color: $dark_steel;
+  display: table;
+  font-family: 'Din Bold';
+  height: 150px;
+  text-align: center;
+  width: 100%;
+}
+
+form {
+  padding: 0 20%;
+}
+
+input,
+textarea {
+  background: none;
+  border: 2px solid $gray_blue;
+  border-radius: 0;
+  color: #DDD;
+  font-family: 'Din Light';
+  font-size: 1em; /* 16 / 16 */
+  margin: 0.3125em 0 1.875em 0; /* 5 / 16  |  30 / 16 */
+  padding: 2%;
+  transition: all 500ms;
+  width: 96%;
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+}
+
+input[type=text]:focus,
+textarea:focus {
+  border: 2px solid #DDD;
+}
+
+input[type=submit] {
+  background: #DDD;
+  border: #DDD;
+  color: $navy;
+  font-family: 'Din Medium';
+  font-size: 0.875em; /* 14 / 16 */
+  margin-bottom: 0;
+  padding: 8px 12px;
+  width: 100px;
+  text-transform: uppercase;
+}
+
+input[type=submit]:hover {
+  background: $mustard;
+  cursor: pointer;
+}
+
+label {
+  color: #DDD;
+  font-family: 'Orator';
+}
+
+main {
+  opacity: 0;
+  position: absolute;
+  left: 150px;
+  right: 0;
+  transition: all 500ms;
+}
+
+nav {
+  background: #FFF;
+  height: 100%;
+  position: fixed;
+  width: 150px;
+  z-index: 500;
+}
+
+p {
+  color: #FFF;
+  font-family: "chaparral-pro-1","chaparral-pro-2";
+  font-size: 1.25em; /* 22 / 16 */
+  line-height: 1.3636em; /* 30 */
+  margin: 1.8181em 0 0 0; /* 40 / 22 */
+  padding: 0 20%;
+}
+
+header,
+section {
+  padding: 9.375em 0; /* 150 / 16 */
+}
+
+small {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+strong {
+  font-weight: 600;
+}
+
+::selection {
+  color: #FFF;
+  background: $mustard;
+}

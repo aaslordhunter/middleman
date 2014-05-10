@@ -1,0 +1,105 @@
+@import 'bourbon';
+@import '_elements';
+
+@media only screen and (max-width: 1050px) {
+  form, p {
+    padding: 0 10%;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  main {
+    position: relative;
+    left: auto;
+    right: auto;
+  }
+
+  nav {
+    background: rgba(255, 255, 255, .9);
+    display: table;
+    height: auto;
+    position: relative;
+    width: 100%;
+  }
+
+  .logo {
+    font-size: 1.5em; /* 24 / 16 */
+    height: 62px;
+    margin: 0;
+    padding-top: 18px;
+    position: relative;
+    width: 80px;
+  }
+
+  .nav {
+    display: table-cell;
+    padding: 0;
+    text-align: left;
+    vertical-align: middle;
+    width: 100%;
+  }
+
+  .nav-item {
+    border-right: 0 !important;
+    display: inline-block;
+    margin-left: 2em; /* 32 / 16 */
+    padding: 0;
+  }
+
+  .nav-item.symbol {
+    display: none;
+  }
+
+  .nav-link {
+    color: #999;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  h2 {
+    font-size: 2em; /* 32 / 16 */
+  }
+
+  form, p {
+    padding: 0;
+  }
+
+  header,
+  section {
+    padding: 3.125em 0; /* 50 / 16 */
+  }
+
+  nav {
+    border-top: 3px solid $mustard;
+    display: block;
+    position: relative;
+  }
+
+  .logo {
+    float: none;
+    font-size: 24px;
+    height: 57px;
+    margin: 0 auto;
+    padding-top: 8px;
+    position: relative;
+    width: 70px;
+  }
+
+  .nav {
+    display: table;
+    text-align: center;
+  }
+
+  .nav-item {
+    display: table-cell;
+    margin: 0;
+    padding: 1.25em 0; /* 20 / 16 */
+    width: 20%;
+  }
+}
+
+@media only screen and (max-device-width: 600px) {
+  .symbol {
+    display: none;
+  }
+}

@@ -1,0 +1,15 @@
+%nav
+  = link_to('index.html', class: 'logo js-logo') do
+    %h1= 'Ali Aas'
+
+  %ul.nav
+    %li.nav-item
+      = section_link('About')
+    %li.nav-item
+      = section_link('Projects')    
+    %li.nav-item
+      = section_link('Contact')
+    %li.nav-item.symbol
+      &mdash;
+    %li.nav-item
+      = link_to 'Blog', blog, target: '_blank', class: 'nav-link'

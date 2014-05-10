@@ -1,0 +1,23 @@
+!!!5
+
+%html
+%head
+  %meta(charset='UTF-8')
+  %meta(content='IE=edge,chrome=1' http-equiv='X-UA-Compatible')
+  %meta(name='viewport' content='width=device-width' content='initial-scale=1')
+  %meta(name='description' content="#{t(:meta_description)}")
+  %link(rel='icon' href='images/favicon.png')
+  %title= 'Ali Aas'
+  = stylesheet_link_tag 'index'
+  = partial 'vendor_scripts'
+  
+%body
+  = partial 'nav'
+
+  %main.js-fade-in
+    = partial 'flashes'
+    = yield
+    = partial 'footer'
+  
+  = javascript_include_tag 'https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js',
+    'purl', 'init'

@@ -1,0 +1,31 @@
+#about.js-anchor
+  %header.bg-steel.js-header
+    .wrap.js-wrap
+      .header-inner.js-header-inner
+        = image_tag 'bio_image.png', class: 'bio-image'
+        %h2= t :header_title
+        %h3
+          = t :header_subtitle
+          = link_to 'LevelUp', 'https://www.thelevelup.com/', target: '_blank', class: 'text-link'
+        .center
+          = link_to t(:header_cta), void, class: 'button js-contact-button'
+
+  %section.bg-navy
+    .wrap
+      %h2= t :about_title
+
+#projects.js-anchor
+  %section
+    .wrap
+      %h2.dash= t :projects
+
+      = partial 'project', locals: { title: t(:project_business_site_title), 
+        description: t(:project_business_site_description),
+        browser: true, image_url: 'levelup_self_enrollment.png' }
+
+#contact.bg-navy.js-anchor.js-contact-section
+  %section
+    .wrap
+      %h2.on-dark= t :contact_title
+
+      = partial 'form'

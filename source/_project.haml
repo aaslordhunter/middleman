@@ -1,0 +1,13 @@
+%article.project
+  %h3= title
+  %p= description
+
+  - if browser
+    %figure.browser
+      .browser-header
+        .browser-button
+        .browser-button
+        .browser-button
+      = image_tag image_url, class: 'project-image'
+  - else
+    = image_tag image_url, class: 'project-image'
