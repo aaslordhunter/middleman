@@ -77,7 +77,13 @@ function focusOnForm() {
 }
 
 function scrollToContactSection() {
-  $('body').animate({ scrollTop: Math.ceil(contactSection.offset().top) }, 500, function() { focusOnForm() });
+  $(window).unbind('.scrollNav');
+  $('body').animate({ scrollTop: Math.ceil(contactSection.offset().top) }, 500,
+    function() { 
+      focusOnForm();
+      $(window).bind("scroll.scrollNav", function() { checkCurrentSectionOnScroll() });
+    }
+  );
 }
 
 function setHeaderSectionHeight() {

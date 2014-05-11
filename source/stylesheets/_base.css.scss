@@ -6,8 +6,8 @@ body {
 }
 
 h2 {
+  @include din-font('Regular');
   color: #FFF;
-  font-family: 'Din Regular';
   font-size: 2.25em; /* 36 / 16 */
   line-height: 1.5em; /* 24 / 16 */
   margin-bottom: .5em; /* 20 / 40 */
@@ -15,8 +15,8 @@ h2 {
 }
 
 h3 {
+  @include din-font('Medium');
   color: #FFF;
-  font-family: 'Din Medium';
   font-size: 1.125em; /* 18 / 16 */
   line-height: 1.333em; /* 24 / 18 */
   text-align: center;
@@ -29,9 +29,9 @@ html {
 }
 
 footer {
-  color: $dark_steel;
+  @include din-font('Bold');
+  color: shade($steel, 30%);
   display: table;
-  font-family: 'Din Bold';
   height: 150px;
   text-align: center;
   width: 100%;
@@ -43,43 +43,38 @@ form {
 
 input,
 textarea {
+  @include din-font('Light');
+  @include transition (all 500ms ease-in-out);
   background: none;
-  border: 2px solid $gray_blue;
+  border: 2px solid tint($navy, 10%);
   border-radius: 0;
   color: #DDD;
-  font-family: 'Din Light';
   font-size: 1em; /* 16 / 16 */
   margin: 0.3125em 0 1.875em 0; /* 5 / 16  |  30 / 16 */
   padding: 2%;
-  transition: all 500ms;
   width: 96%;
-}
 
-input:focus,
-textarea:focus {
-  outline: none;
-}
-
-input[type=text]:focus,
-textarea:focus {
-  border: 2px solid #DDD;
+  &:focus {
+    border: 2px solid #DDD;
+    outline: none;
+  }
 }
 
 input[type=submit] {
+  @include din-font('Medium');
   background: #DDD;
   border: #DDD;
   color: $navy;
-  font-family: 'Din Medium';
   font-size: 0.875em; /* 14 / 16 */
   margin-bottom: 0;
   padding: 8px 12px;
   width: 100px;
   text-transform: uppercase;
-}
-
-input[type=submit]:hover {
-  background: $mustard;
-  cursor: pointer;
+  
+  &:hover {
+    background: $mustard;
+    cursor: pointer;
+  }
 }
 
 label {
@@ -88,11 +83,11 @@ label {
 }
 
 main {
+  @include transition (all 500ms ease-in-out);
   opacity: 0;
   position: absolute;
   left: 150px;
   right: 0;
-  transition: all 500ms;
 }
 
 nav {

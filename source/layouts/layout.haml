@@ -1,5 +1,4 @@
 !!!5
-
 %html
 %head
   %meta(charset='UTF-8')
@@ -12,12 +11,26 @@
   = partial 'vendor_scripts'
   
 %body
-  = partial 'nav'
+  %nav
+    = link_to('index.html', class: 'logo js-logo') do
+      %h1= 'Ali Aas'
+    %ul.nav
+      %li.nav-item
+        = section_link('About')
+      %li.nav-item
+        = section_link('Projects')    
+      %li.nav-item
+        = section_link('Contact')
+      %li.nav-item.symbol
+        &mdash;
+      %li.nav-item
+        = link_to 'Blog', blog, target: '_blank', class: 'nav-link'
 
   %main.js-fade-in
-    = partial 'flashes'
+    %p.flash.flash-error= t :flash_error
+    %p.flash.flash-success= t :flash_success
     = yield
-    = partial 'footer'
+    %footer.bg-steel
+      %small= '&copy; 2014 Alexandra Flynn Aas'
   
-  = javascript_include_tag 'https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js',
-    'purl', 'init'
+  = javascript_include_tag jquery, 'purl', 'init'

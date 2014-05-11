@@ -35,17 +35,17 @@
 }
 
 .button {
+  @include din-font('Medium');
+  @include transition (all 200ms ease-in-out);
   background: $mustard;
   border: 2px solid $mustard;
   color: $navy;
   display: inline-block;
-  font-family: 'Din Medium';
   font-size: 0.875em; /* 14 / 16 */
   margin-top: 3.125em; /* 50 / 16 */
   padding: 8px 12px;
   text-decoration: none;
   text-transform: uppercase;
-  transition: background 200ms, border 200ms;
 
   &:hover {
     background: #FFF;
@@ -58,14 +58,14 @@
 }
 
 .fade-in {
+  @include transition (all 1000ms ease-in-out);
   opacity: 1;
-  transition: all 1000ms;
 }
 
 .flash {
+  @include din-font('Bold');
   color: #FFF;
   display: none;
-  font-family: 'Din Bold';
   font-size: .9375em; /* 15 / 16 */
   line-height: 1.5em; /* 24 */
   margin: 0;
@@ -97,6 +97,7 @@
 }
 
 .logo {
+  @include transition (background 200ms ease-in-out, color 200ms ease-in-out);
   background: $mustard;
   bottom: 0;
   color: $navy;
@@ -109,7 +110,6 @@
   text-align: center;
   text-decoration: none;
   text-transform: lowercase;
-  transition: background 200ms, color 200ms;
   width: 150px;
   
   &:hover {
@@ -134,12 +134,12 @@
 }
 
 .nav-link {
+  @include din-font('Medium');
+  @include transition (all 500ms ease-in-out);
   color: #BBB;
   cursor: pointer;
   display: inline-block;
-  font-family: 'Din Medium';
   text-decoration: none;
-  transition: all 500ms;
 
   &.active, &:hover {
     color: #222;
@@ -179,11 +179,11 @@
 }
 
 .text-link {
+  @include transition (all 500ms ease-in-out);
   border-bottom: 1px solid $mustard;
   color: inherit;
   padding-bottom: 0.1875em; /* 3 / 16 */
   text-decoration: none;
-  transition: all 500ms;
   
   &:hover {
     border-bottom: 1px solid #FFF;
