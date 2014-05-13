@@ -14,6 +14,7 @@ h2 {
   text-align: center;
 }
 
+
 h3 {
   @include din-font('Medium');
   color: #FFF;
@@ -100,7 +101,7 @@ nav {
 
 p {
   color: #FFF;
-  font-family: "chaparral-pro-1","chaparral-pro-2";
+  font-family: "chaparral-pro-1","chaparral-pro-2", Georgia;
   font-size: 1.25em; /* 22 / 16 */
   line-height: 1.3636em; /* 30 */
   margin: 1.8181em 0 0 0; /* 40 / 22 */
