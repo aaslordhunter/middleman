@@ -6,7 +6,8 @@
   %meta(name='viewport' content='width=device-width' content='initial-scale=1')
   %meta(name='description' content="#{t(:meta_description)}")
   %link(rel='icon' href='images/favicon.png')
-  %title= 'Ali Aas'
+  %link(rel='stylesheet' href=font_awesome_url)
+  %title= t :title
   = stylesheet_link_tag 'index'
   = partial 'vendor_scripts'
   
@@ -21,17 +22,21 @@
         = section_link('Projects')    
       %li.nav-item
         = section_link('Contact')
-      %li.nav-item.symbol
-        &mdash;
+      %li.nav-item.fa
+        %i.fa.fa-minus
       %li.nav-item
-        = link_to 'Blog', blog, target: '_blank', class: 'nav-link'
+        = link_to 'Blog', blog_url, target: '_blank', class: 'nav-link'
 
   %main.js-fade-in
     %p.flash.flash-error= t :flash_error
     %p.flash.flash-success= t :flash_success
     = yield
     %footer.bg-steel
-      %small= '&copy; 2014 Alexandra Flynn Aas'
+      %small
+        &copy; 2014 Alexandra Flynn Aas
+        %br
+        Built using
+        = link_to 'Middleman', repo_url, target: '_blank', class: 'text-link'
   
   = google_javascript_include_tag 'jquery', '1.7.1'
   = javascript_include_tag 'purl', 'init'

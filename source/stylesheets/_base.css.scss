@@ -1,6 +1,12 @@
 @import 'bourbon';
 @import '_elements';
 
+html {
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
 body {
   background: #EEE
 }
@@ -27,15 +33,8 @@ header {
   background-size: cover;
 }
 
-html {
-  -webkit-font-smoothing: antialiased;
-  font-smoothing: antialiased;
-  text-rendering: optimizeLegibility;
-}
-
 footer {
   @include din-font('Bold');
-  color: shade($steel, 30%);
   display: table;
   height: 150px;
   text-align: center;
@@ -66,20 +65,8 @@ textarea {
 }
 
 input[type=submit] {
-  @include din-font('Medium');
-  background: #DDD;
-  border: #DDD;
-  color: $navy;
-  font-size: em(14);
+  @include button;
   margin-bottom: 0;
-  padding: em(8, 14) em(12, 14);
-  width: 100px;
-  text-transform: uppercase;
-  
-  &:hover {
-    background: $mustard;
-    cursor: pointer;
-  }
 }
 
 label {
@@ -118,8 +105,11 @@ section {
 }
 
 small {
+  color: shade($steel, 30%);
   display: table-cell;
+  line-height: em(24);
   vertical-align: middle;
+  width: 100%;
 }
 
 strong {

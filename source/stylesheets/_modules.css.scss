@@ -34,26 +34,18 @@
 }
 
 .button {
-  @include din-font('Medium');
-  @include transition (all 200ms ease-in-out);
-  background: $mustard;
-  border: 2px solid $mustard;
-  color: $navy;
+  @include button;
   display: inline-block;
-  font-size: em(14);
   margin-top: em(40, 14);
-  padding: em(8, 14) em(12, 14);
   text-decoration: none;
-  text-transform: uppercase;
-
-  &:hover {
-    background: #FFF;
-    border: 2px solid #FFF;
-  }
 }
 
 .center {
   text-align: center;
+}
+
+.fa {
+  color: #DDD;
 }
 
 .fade-in {
@@ -111,7 +103,7 @@
   text-transform: lowercase;
   
   &:hover {
-    background: $mustard;
+    background: $navy;
     color: $mustard;
   }
 }
@@ -171,11 +163,6 @@
   width: 100%;
 }
 
-.symbol {
-  color: $mustard;
-  font-weight: 600;
-}
-
 .text-link {
   @include transition (all 500ms ease-in-out);
   border-bottom: 1px solid $mustard;
@@ -184,6 +171,7 @@
   text-decoration: none;
   
   &:hover {
+    background: rgba(255, 255, 255, .3);
     border-bottom: 1px solid #FFF;
   }
 }

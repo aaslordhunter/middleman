@@ -1,6 +1,14 @@
 module CustomHelpers
-  def blog
+  def blog_url
     'http://blog.aliflynnaas.com/'
+  end
+
+  def font_awesome_url
+    '//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css'
+  end
+
+  def repo_url
+    'https://github.com/aaslordhunter/middleman'
   end
 
   def google_javascript_include_tag(path, version, filename = nil)

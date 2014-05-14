@@ -18,13 +18,12 @@
     @include size(100% auto);
     background: rgba(255, 255, 255, .9);
     display: table;
-    position: relative;
+    position: fixed;
   }
 
   .logo {
-    font-size: 1.5em; /* 24 / 16 */
+    font-size: em(24);
     height: 62px;
-    margin: 0;
     padding-top: 18px;
     position: relative;
     width: 80px;
@@ -45,18 +44,14 @@
     padding: 0;
   }
 
-  .nav-item.symbol {
-    display: none;
-  }
-
   .nav-link {
-    color: #999;
+    color: #777;
   }
 }
 
 @media only screen and (max-width: 600px) {
   h2 {
-    font-size: 2em; /* 32 / 16 */
+    font-size: em(32);
   }
 
   form, p {
@@ -65,22 +60,25 @@
 
   header,
   section {
-    padding: 3.125em 0; /* 50 / 16 */
+    padding: em(50) 0;
   }
 
   nav {
+    background: #FFF;
     border-top: 3px solid $mustard;
     display: block;
     position: relative;
   }
 
+  .fa {
+    display: none !important;
+  }
+
   .logo {
-    float: none;
     font-size: 24px;
     height: 57px;
     margin: 0 auto;
     padding-top: 8px;
-    position: relative;
     width: 70px;
   }
 
@@ -95,10 +93,14 @@
     padding: 1.25em 0; /* 20 / 16 */
     width: 20%;
   }
+
+  .nav-link.active {
+    color: #777;
+  }
 }
 
 @media only screen and (max-device-width: 600px) {
-  .symbol {
+  .fa {
     display: none;
   }
 }
