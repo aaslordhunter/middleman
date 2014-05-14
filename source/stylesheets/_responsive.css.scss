@@ -9,17 +9,16 @@
 
 @media only screen and (max-width: 900px) {
   main {
-    position: relative;
     left: auto;
+    position: relative;
     right: auto;
   }
 
   nav {
+    @include size(100% auto);
     background: rgba(255, 255, 255, .9);
     display: table;
-    height: auto;
     position: relative;
-    width: 100%;
   }
 
   .logo {

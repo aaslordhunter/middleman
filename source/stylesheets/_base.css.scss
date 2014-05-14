@@ -8,19 +8,23 @@ body {
 h2 {
   @include din-font('Regular');
   color: #FFF;
-  font-size: 2.25em; /* 36 / 16 */
-  line-height: 1.5em; /* 24 / 16 */
-  margin-bottom: .5em; /* 20 / 40 */
+  font-size: em(36);
+  line-height: em(54, 36);
+  margin-bottom: em(18, 36);
   text-align: center;
 }
-
 
 h3 {
   @include din-font('Medium');
   color: #FFF;
-  font-size: 1.125em; /* 18 / 16 */
-  line-height: 1.333em; /* 24 / 18 */
+  font-size: em(18);
+  line-height: em(24, 18);
   text-align: center;
+}
+
+header {
+  background: image-url('desk_pano.png') center;
+  background-size: cover;
 }
 
 html {
@@ -50,8 +54,8 @@ textarea {
   border: 2px solid tint($navy, 10%);
   border-radius: 0;
   color: #DDD;
-  font-size: 1em; /* 16 / 16 */
-  margin: 0.3125em 0 1.875em 0; /* 5 / 16  |  30 / 16 */
+  font-size: 1em;
+  margin: em(5) 0 em(30) 0;
   padding: 2%;
   width: 96%;
 
@@ -66,9 +70,9 @@ input[type=submit] {
   background: #DDD;
   border: #DDD;
   color: $navy;
-  font-size: 0.875em; /* 14 / 16 */
+  font-size: em(14);
   margin-bottom: 0;
-  padding: 8px 12px;
+  padding: em(8, 14) em(12, 14);
   width: 100px;
   text-transform: uppercase;
   
@@ -80,14 +84,14 @@ input[type=submit] {
 
 label {
   color: #DDD;
-  font-family: 'Orator';
+  font-family: 'Orator', $monospace;
 }
 
 main {
+  @include opacity(0);
   @include transition (all 500ms ease-in-out);
-  opacity: 0;
-  position: absolute;
   left: 150px;
+  position: absolute;
   right: 0;
 }
 
@@ -101,16 +105,16 @@ nav {
 
 p {
   color: #FFF;
-  font-family: "chaparral-pro-1","chaparral-pro-2", Georgia;
-  font-size: 1.25em; /* 22 / 16 */
-  line-height: 1.3636em; /* 30 */
-  margin: 1.8181em 0 0 0; /* 40 / 22 */
+  font-family: "chaparral-pro-1", "chaparral-pro-2", $georgia;
+  font-size: em(18);
+  line-height: em(30, 18);
+  margin-top: em(40, 18);
   padding: 0 20%;
 }
 
 header,
 section {
-  padding: 9.375em 0; /* 150 / 16 */
+  padding: em(150) 0;
 }
 
 small {

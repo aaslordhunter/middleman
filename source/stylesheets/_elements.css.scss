@@ -5,5 +5,13 @@ $red: #DD4D4D;
 $steel: #5E6A72;
 
 @mixin din_font($weight) {
-  font-family: 'Din #{$weight}', Helvetica, Arial, sans-serif;
+  font-family: 'Din #{$weight}', $helvetica;
+}
+
+@mixin opacity($trans) {
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=#{$trans * 100})";
+  filter: alpha(opacity=($trans * 100));
+  -moz-opacity: $trans;
+  -khtml-opacity: $trans;
+  opacity: $trans;
 }

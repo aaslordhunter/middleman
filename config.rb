@@ -19,6 +19,7 @@ end
 
 activate :i18n
 activate :minify_html
+activate :relative_assets
 
 set :css_dir, 'stylesheets'
 set :js_dir, 'javascripts'
