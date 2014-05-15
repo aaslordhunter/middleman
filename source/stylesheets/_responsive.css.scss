@@ -96,3 +96,9 @@
     width: 20%;
   }
 }
+
+@media only screen and (max-device-width: 600px) {
+  a {
+    -webkit-tap-highlight-color: rgba(211, 174, 41, .9);
+  }
+}

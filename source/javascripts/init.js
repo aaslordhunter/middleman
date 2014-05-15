@@ -1,15 +1,10 @@
 var anchoredSection = $('.js-anchor');
-var contactForm = $('.js-contact-form');
 var contactButton = $('.js-contact-button');
 var contactSection = $('.js-contact-section');
-var firstInputOfContactForm = contactForm.children('input').first();
 var fadeIn = $('.js-fade-in');
-var flashSuccess = $('.flash-success');
-var flashError = $('.flash-error');
 var navLink = $('.js-nav-link');
 var navItem = navLink.parent();
 var onMobileDevice = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
-var requiredFormFields = $('.js-required-field');
 
 
 //
@@ -23,10 +18,9 @@ $(window).bind("scroll.scrollNav", function() {
 
 $(window).load(function() {
   fadeInPage();
-  showFlashes();
 
   if (!onMobileDevice) {
-    activateNav();
+    activateNavOnPageLoad();
     setHeaderSectionHeight();
   };
 });
@@ -38,14 +32,13 @@ $(window).resize(function() {
 });
 
 contactButton.click(scrollToContactSection);
-contactForm.submit(validateForm);
 navLink.click(function(){ activateLinkAndScrollToAnchor($(this)) });
 
 
 //
 
 
-function activateNav() {
+function activateNavOnPageLoad() {
   $(window).scrollTop($(window).scrollTop() + 1);
   $(window).scrollTop($(window).scrollTop() - 1);
 }
@@ -61,29 +54,32 @@ function activateLinkAndScrollToAnchor(clickedNavLink) {
   $(window).unbind('.scrollNav');
   $('body').animate({ scrollTop: Math.ceil($(targetAnchorId).offset().top) }, 500,
     function() { 
-      if (targetAnchorName == 'contact') { focusOnForm(); }
       $(window).bind("scroll.scrollNav", function() { checkCurrentSectionOnScroll() });
+  });
+}
+
+function checkCurrentSectionOnScroll() {
+  anchoredSection.each(function() {
+    var section = $(this);
+    var sectionId = section.attr('id');
+    var sectionNavLink = $('[data-anchor="' + sectionId + '"]');
+    var sectionNavItem = sectionNavLink.parent();
+    var sectionTop = section.offset().top;
+    var sectionBottom = sectionTop + section.outerHeight();
+    var windowScrollHeight = $(window).scrollTop();
+    var windowBelowSectionTop = windowScrollHeight >= sectionTop;
+    var windowAboveSectionBottom = windowScrollHeight < sectionBottom;
+    var windowInsideSection = windowAboveSectionBottom && windowBelowSectionTop;
+    var sectionNavNotActive = !sectionNavLink.hasClass('active');
+
+    if (windowInsideSection) {
+      updateNav(sectionNavLink, sectionNavItem);
+    };
   });
 }
 
 function fadeInPage() {
   fadeIn.addClass('fade-in');
-}
-
-function focusOnForm() {
-  if (!onMobileDevice) {
-    firstInputOfContactForm.focus();
-  };
-}
-
-function scrollToContactSection() {
-  $(window).unbind('.scrollNav');
-  $('body').animate({ scrollTop: Math.ceil(contactSection.offset().top) }, 500,
-    function() { 
-      focusOnForm();
-      $(window).bind("scroll.scrollNav", function() { checkCurrentSectionOnScroll() });
-    }
-  );
 }
 
 function setHeaderSectionHeight() {
@@ -112,59 +108,16 @@ function setHeaderSectionHeight() {
   }
 }
 
-function showFlashes() {
-  if ($.url().param('success') == 'true') {
-    flashSuccess.slideDown('slow');
-  
-  } else if ($.url().param('success') == 'false') {
-    flashError.slideDown('slow');
-  };
-}
-
-function checkCurrentSectionOnScroll() {
-  anchoredSection.each(function() {
-    var section = $(this);
-    var sectionId = section.attr('id');
-    var sectionNavLink = $('[data-anchor="' + sectionId + '"]');
-    var sectionNavItem = sectionNavLink.parent();
-    var sectionTop = section.offset().top;
-    var sectionBottom = sectionTop + section.outerHeight();
-    var windowScrollHeight = $(window).scrollTop();
-    var windowBelowSectionTop = windowScrollHeight >= sectionTop;
-    var windowAboveSectionBottom = windowScrollHeight < sectionBottom;
-    var windowInsideSection = windowAboveSectionBottom && windowBelowSectionTop;
-    var sectionNavNotActive = !sectionNavLink.hasClass('active');
-
-    if (windowInsideSection) {
-      updateNav(sectionNavLink, sectionNavItem);
-    };
-  });
+function scrollToContactSection() {
+  $(window).unbind('.scrollNav');
+  $('body').animate({ scrollTop: Math.ceil(contactSection.offset().top) }, 500,
+    function() {
+      $(window).bind("scroll.scrollNav", function() { checkCurrentSectionOnScroll() });
+    }
+  );
 }
 
 function updateNav(currentNavLink, currentNavItem) {
   navLink.add(navItem).removeClass('active');
   currentNavLink.add(currentNavItem).addClass('active');
-}
-
-function validateForm() {
-  var invalidFieldsDetected = !validateRequiredFields();
-
-  if (invalidFieldsDetected) {
-    return false;
-  };
-}
-
-function validateRequiredFields() {
-  var valid = true;
-
-  requiredFormFields.each(function() {
-    if ($(this).val().length == 0) {
-      $(this).addClass('form-error');
-      valid = false;
-    } else {
-      $(this).removeClass('form-error');
-    };
-  });
-
-  return valid;
 }
