@@ -1,40 +1,40 @@
 !!!5
 %html
-%head
-  %meta(charset='UTF-8')
-  %meta(content='IE=edge,chrome=1' http-equiv='X-UA-Compatible')
-  %meta(name='viewport' content='width=device-width' content='initial-scale=1')
-  %meta(name='description' content="#{t(:meta_description)}")
-  %link(rel='icon' href='images/favicon.png')
-  %link(rel='stylesheet' href=font_awesome_url)
-  %title= t :title
-  = stylesheet_link_tag 'index'
-  = partial 'vendor_scripts'
-  
-%body
-  %nav
-    = link_to('index.html', class: 'logo js-logo') do
-      %h1= 'Ali Aas'
-    %ul.nav-inner
-      %li.nav-item
-        = section_link('About')
-      %li.nav-item
-        = section_link('Projects')    
-      %li.nav-item
-        = section_link('Contact')
-      %li.nav-item.fa
-        %i.fa.fa-minus
-      %li.nav-item
-        = link_to 'Blog', blog_url, target: '_blank', class: 'nav-link'
+  %head
+    %meta(charset='UTF-8')
+    %meta(content='IE=edge,chrome=1' http-equiv='X-UA-Compatible')
+    %meta(name='viewport' content='width=device-width' content='initial-scale=1')
+    %meta(name='description' content="#{t(:meta_description)}")
+    %link(rel='icon' href='images/favicon.png')
+    %link(rel='stylesheet' href=font_awesome_url)
+    %title= t :title
+    = stylesheet_link_tag 'index'
+    = partial 'vendor_scripts'
 
-  %main.js-fade-in
-    = yield
-    %footer.bg-steel
-      %small
-        &copy; 2014 Alexandra Flynn Aas
-        %br
-        Built using
-        = link_to 'Middleman', repo_url, target: '_blank', class: 'text-link'
-  
-  = google_javascript_include_tag 'jquery', '1.7.1'
-  = javascript_include_tag 'purl', 'init'
+  %body
+    %nav
+      = link_to('index.html', class: 'logo js-logo') do
+        %h1= 'Ali Aas'
+      %ul.nav-inner
+        %li.nav-item
+          = section_link('About')
+        %li.nav-item
+          = section_link('Projects')
+        %li.nav-item
+          = section_link('Contact')
+        %li.nav-item.fa
+          %i.fa.fa-minus
+        %li.nav-item
+          = link_to 'Blog', blog_url, target: '_blank', class: 'nav-link'
+
+    %main.js-fade-in
+      = yield
+      %footer.bg-steel
+        %small
+          &copy; 2014 Alexandra Flynn Aas
+          %br
+          Built using
+          = link_to 'Middleman', repo_url, target: '_blank', class: 'text-link'
+
+    = google_javascript_include_tag 'jquery', '1.7.1'
+    = javascript_include_tag 'purl', 'init'
