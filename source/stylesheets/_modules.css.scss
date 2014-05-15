@@ -36,8 +36,8 @@
 .button {
   @include din-font('Medium');
   @include transition (all 200ms ease-in-out);
-  background: $mustard;
-  border-bottom: 2px solid $mustard;
+  background: $gold;
+  border-bottom: 2px solid $gold;
   color: $navy;
   cursor: pointer;
   display: inline-block;
@@ -64,7 +64,7 @@
 }
 
 .fa {
-  color: $mustard;
+  color: $gold;
 }
 
 .fade-in {
@@ -79,7 +79,7 @@
 .logo {
   @include size(150px 111px);
   @include transition (background 200ms ease-in-out, color 200ms ease-in-out);
-  background: $mustard;
+  background: $gold;
   bottom: 0;
   color: $navy;
   display: block;
@@ -93,8 +93,18 @@
   
   &:hover {
     background: $navy;
-    color: $mustard;
+    color: $gold;
   }
+}
+
+.emdash-gold:before {
+  @include emdash;
+  color: $gold;
+}
+
+.emdash-on-navy:before {
+  @include emdash;
+  color: lighten($navy, 5%);
 }
 
 .nav-inner {
@@ -108,7 +118,7 @@
 }
 
 .nav-item.active {
-  border-right: 5px solid $mustard;
+  border-right: 5px solid $gold;
 }
 
 .nav-link {
@@ -130,16 +140,6 @@
   color: #555;
 }
 
-.project:before {
-  color: $mustard;
-  content: "\2014";
-  font-size: 40px;
-  font-weight: 600;
-  display: block;
-  margin: em(30, 40) 0;
-  text-align: center;
-}
-
 .project-image {
   display: block;
   width: 100%;
@@ -147,7 +147,7 @@
 
 .text-link {
   @include transition (all 500ms ease-in-out);
-  border-bottom: 1px solid $mustard;
+  border-bottom: 1px solid $gold;
   color: inherit;
   padding-bottom: em(3);
   text-decoration: none;

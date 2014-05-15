@@ -1,0 +1,8 @@
+#projects.js-anchor
+  %section
+    .wrap
+      %h2= t :projects_title
+
+      = partial 'project', locals: { title: t(:project_business_site_title), 
+        description: t(:project_business_site_description),
+        browser: true, image_url: 'levelup_self_enrollment.png' }

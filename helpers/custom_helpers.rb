@@ -3,17 +3,29 @@ module CustomHelpers
     'http://blog.aliflynnaas.com/'
   end
 
-  def font_awesome_url
-    '//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css'
+  def cellphone_number
+    '860-918-5895'
   end
 
-  def repo_url
-    'https://github.com/aaslordhunter/middleman'
+  def font_awesome_url
+    '//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.css'
+  end
+
+  def gmail_address
+    'aas.alexandra@gmail.com'
+  end
+
+  def linkedin_url
+    'https://www.linkedin.com/in/aliflynnaas'
   end
 
   def google_javascript_include_tag(path, version, filename = nil)
     href = 'https://ajax.googleapis.com/ajax/libs/%s/%s/%s.min.js'
     javascript_include_tag href % [path, version, filename || path]
+  end
+
+  def repo_url
+    'https://github.com/aaslordhunter/middleman'
   end
 
   def section_link(section_name)
