@@ -15,7 +15,7 @@
   %nav
     = link_to('index.html', class: 'logo js-logo') do
       %h1= 'Ali Aas'
-    %ul.nav
+    %ul.nav-inner
       %li.nav-item
         = section_link('About')
       %li.nav-item
@@ -28,8 +28,6 @@
         = link_to 'Blog', blog_url, target: '_blank', class: 'nav-link'
 
   %main.js-fade-in
-    %p.flash.flash-error= t :flash_error
-    %p.flash.flash-success= t :flash_success
     = yield
     %footer.bg-steel
       %small

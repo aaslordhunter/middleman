@@ -1,32 +1,6 @@
-$green: #16B37E;
 $mustard: #D3AE29;
 $navy: #1C212E;
-$red: #DD4D4D;
 $steel: #5E6A72;
-
-@mixin button {
-  @include din-font('Medium');
-  @include transition (all 200ms ease-in-out);
-  background: $mustard;
-  border: none;
-  border-bottom: 2px solid $mustard;
-  color: $navy;
-  cursor: pointer;
-  font-size: em(14);
-  padding: em(8, 14) 0;
-  position: relative;
-  text-transform: uppercase;
-  width: 100px;
-
-  &:hover {
-    background: #FFF;
-  }
-
-  &:active {
-    border-bottom: none;
-    top: 2px;
-  }
-}
 
 @mixin din_font($weight) {
   font-family: 'Din #{$weight}', $helvetica;

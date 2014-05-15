@@ -18,7 +18,7 @@
 #projects.js-anchor
   %section
     .wrap
-      %h2.dash= t :projects_title
+      %h2= t :projects_title
 
       = partial 'project', locals: { title: t(:project_business_site_title), 
         description: t(:project_business_site_description),
@@ -28,5 +28,3 @@
   %section
     .wrap
       %h2.on-dark= t :contact_title
-
-      = partial 'form'

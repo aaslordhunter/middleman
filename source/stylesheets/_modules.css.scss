@@ -34,10 +34,29 @@
 }
 
 .button {
-  @include button;
+  @include din-font('Medium');
+  @include transition (all 200ms ease-in-out);
+  background: $mustard;
+  border-bottom: 2px solid $mustard;
+  color: $navy;
+  cursor: pointer;
   display: inline-block;
+  font-size: em(14);
   margin-top: em(40, 14);
+  padding: 10px 0 8px 0;
+  position: relative;
   text-decoration: none;
+  text-transform: uppercase;
+  width: 100px;
+
+  &:hover {
+    background: #FFF;
+  }
+
+  &:active {
+    border-bottom: none;
+    top: 2px;
+  }
 }
 
 .center {
@@ -45,7 +64,7 @@
 }
 
 .fa {
-  color: #DDD;
+  color: $mustard;
 }
 
 .fade-in {
@@ -53,38 +72,8 @@
   @include transition (all 1000ms ease-in-out);
 }
 
-.flash {
-  @include din-font('Bold');
-  color: #FFF;
-  display: none;
-  font-size: em(15);
-  line-height: em(24, 15);
-  margin: 0;
-  padding: 1em 0;
-  position: absolute;
-  text-align: center;
-  width: 100%;
-  z-index: 1000;
-}
-
-.flash-error {
-  background: $red;
-}
-
-.flash-success {
-  background: $green;
-}
-
-.form-error {
-  border: 2px solid $red;
-}
-
 .header-unpadded {
   padding: 0;
-}
-
-.header-reset {
-  padding: em(150) 0;
 }
 
 .logo {
@@ -94,7 +83,7 @@
   bottom: 0;
   color: $navy;
   display: block;
-  font-family: 'Orator', $monospace;
+  font-family: 'Orator';
   font-size: em(40);
   padding-top: 39px;
   position: absolute;
@@ -108,10 +97,9 @@
   }
 }
 
-.nav {
+.nav-inner {
   padding-top: em(20);
   text-align: right;
-  width: 150px;
 }
 
 .nav-item {
@@ -142,8 +130,7 @@
   color: #555;
 }
 
-.project:after,
-.dash:after {
+.project:before {
   color: $mustard;
   content: "\2014";
   font-size: 40px;
@@ -151,11 +138,6 @@
   display: block;
   margin: em(30, 40) 0;
   text-align: center;
-}
-
-.project:last-child:after {
-  content: "";
-  margin: 0;
 }
 
 .project-image {

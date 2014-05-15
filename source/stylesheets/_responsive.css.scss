@@ -2,7 +2,7 @@
 @import '_elements';
 
 @media only screen and (max-width: 1050px) {
-  form, p {
+  p {
     padding: 0 10%;
   }
 }
@@ -16,9 +16,8 @@
 
   nav {
     @include size(100% auto);
-    background: rgba(255, 255, 255, .9);
     display: table;
-    position: fixed;
+    position: relative;
   }
 
   .logo {
@@ -29,7 +28,7 @@
     width: 80px;
   }
 
-  .nav {
+  .nav-inner {
     display: table-cell;
     padding: 0;
     text-align: left;
@@ -44,7 +43,8 @@
     padding: 0;
   }
 
-  .nav-link {
+  .nav-link,
+  .nav-link.active {
     color: #777;
   }
 }
@@ -54,8 +54,8 @@
     font-size: em(32);
   }
 
-  form, p {
-    padding: 0;
+  header {
+    background-image: none;
   }
 
   header,
@@ -64,10 +64,12 @@
   }
 
   nav {
-    background: #FFF;
     border-top: 3px solid $mustard;
-    display: block;
-    position: relative;
+  }
+
+  p {
+    padding: 0;
+    text-align: center;
   }
 
   .fa {
@@ -82,7 +84,7 @@
     width: 70px;
   }
 
-  .nav {
+  .nav-inner {
     display: table;
     text-align: center;
   }
@@ -90,17 +92,7 @@
   .nav-item {
     display: table-cell;
     margin: 0;
-    padding: 1.25em 0; /* 20 / 16 */
+    padding: em(20) 0;
     width: 20%;
-  }
-
-  .nav-link.active {
-    color: #777;
-  }
-}
-
-@media only screen and (max-device-width: 600px) {
-  .fa {
-    display: none;
   }
 }

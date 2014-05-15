@@ -16,7 +16,7 @@ h2 {
   color: #FFF;
   font-size: em(36);
   line-height: em(54, 36);
-  margin-bottom: em(18, 36);
+  margin-bottom: em(15, 36);
   text-align: center;
 }
 
@@ -33,45 +33,15 @@ header {
   background-size: cover;
 }
 
+header, section {
+  padding: em(150) 0;
+}
+
 footer {
-  @include din-font('Bold');
   display: table;
   height: 150px;
   text-align: center;
   width: 100%;
-}
-
-form {
-  padding: 0 20%;
-}
-
-input,
-textarea {
-  @include din-font('Light');
-  @include transition (all 500ms ease-in-out);
-  background: none;
-  border: 2px solid tint($navy, 10%);
-  border-radius: 0;
-  color: #DDD;
-  font-size: 1em;
-  margin: em(5) 0 em(30) 0;
-  padding: 2%;
-  width: 96%;
-
-  &:focus {
-    border: 2px solid #DDD;
-    outline: none;
-  }
-}
-
-input[type=submit] {
-  @include button;
-  margin-bottom: 0;
-}
-
-label {
-  color: #DDD;
-  font-family: 'Orator', $monospace;
 }
 
 main {
@@ -92,28 +62,20 @@ nav {
 
 p {
   color: #FFF;
-  font-family: "chaparral-pro-1", "chaparral-pro-2", $georgia;
+  font-family: "chaparral-pro-1","chaparral-pro-2", $georgia;
   font-size: em(18);
   line-height: em(30, 18);
   margin-top: em(40, 18);
   padding: 0 20%;
 }
 
-header,
-section {
-  padding: em(150) 0;
-}
-
 small {
+  @include din-font('Bold');
   color: shade($steel, 30%);
   display: table-cell;
   line-height: em(24);
   vertical-align: middle;
   width: 100%;
-}
-
-strong {
-  font-weight: 600;
 }
 
 ::selection {
