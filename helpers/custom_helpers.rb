@@ -15,6 +15,10 @@ module CustomHelpers
     'aas.alexandra@gmail.com'
   end
 
+  def github_url
+    'https://github.com/aaslordhunter/'
+  end
+
   def linkedin_url
     'https://www.linkedin.com/in/aliflynnaas'
   end
@@ -25,7 +29,7 @@ module CustomHelpers
   end
 
   def repo_url
-    'https://github.com/aaslordhunter/middleman'
+    github_url + 'middleman'
   end
 
   def section_link(section_name)
