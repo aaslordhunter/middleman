@@ -2,9 +2,9 @@
   %header.bg-steel.js-header
     .wrap.js-wrap
       .header-inner.js-header-inner
-        = image_tag 'bio_image.png', class: 'bio-image'
+        %h5.header-logo= 'Ali Aas'
         %h2= t :header_title
-        %h3
+        %h4
           = t :header_subtitle
           = link_to 'LevelUp', 'https://www.thelevelup.com/', target: '_blank', class: 'text-link'
         .center
@@ -12,6 +12,7 @@
 
   %section.bg-navy
     .wrap
+      = image_tag 'bio_image.png', class: 'bio-image'
       %h2= t :about_title
       .emdash-on-navy
       %p= t :about_description

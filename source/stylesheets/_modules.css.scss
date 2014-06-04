@@ -16,7 +16,7 @@
 .bio-image {
   display: block;
   margin: 0 auto em(50) auto;
-  width: 250px;
+  width: 150px;
 }
 
 .browser {
@@ -111,6 +111,11 @@
   color: lighten($navy, 5%);
 }
 
+.emdash-small:before {
+  @include emdash-small;
+  color: $gold;
+}
+
 .icon {
   display: inline-block;
   height: 40px;
@@ -192,7 +197,7 @@
 }
 
 #projects h2,
-#projects h3,
+#projects h4,
 #projects p {
   color: #555;
 }

@@ -14,18 +14,40 @@ body {
 h2 {
   @include din-font('Regular');
   color: #FFF;
-  font-size: em(36);
-  line-height: em(54, 36);
+  font-size: em(40);
+  line-height: em(54, 40);
   margin-bottom: em(15, 36);
   text-align: center;
 }
 
 h3 {
+  @include din-font('Regular');
+  color: #FFF;
+  font-size: em(36);
+  line-height: em(40, 36);
+  margin: em(15, 36) 0;
+  text-align: center;
+}
+
+h4 {
   @include din-font('Medium');
   color: #FFF;
-  font-size: em(18);
-  line-height: em(24, 18);
+  font-size: em(22);
+  line-height: em(26, 22);
   text-align: center;
+}
+
+h5 {
+  border: 2px solid $gold;
+  color: #FFF;
+  display: table;
+  font-family: 'Orator';
+  font-size: em(30);
+  margin: 0 auto 30px auto;
+  padding: 21px 0 15px 0;
+  text-align: center;
+  text-transform: lowercase;
+  width: 96px;
 }
 
 header {
@@ -63,10 +85,10 @@ nav {
 p {
   color: #FFF;
   font-family: "chaparral-pro-1","chaparral-pro-2", $georgia;
-  font-size: em(20);
-  line-height: em(28, 18);
+  font-size: em(22);
+  line-height: em(42, 22);
   margin: em(40, 18);
-  padding: 0 15%;
+  padding: 0 12%;
 }
 
 small {

@@ -11,6 +11,15 @@ $steel: #5E6A72;
   text-align: center;
 }
 
+@mixin emdash-small {
+  content: "\2014";
+  font-size: 40px;
+  font-weight: 200;
+  display: block;
+  margin: em(10, 40) 0;
+  text-align: center;
+}
+
 @mixin din_font($weight) {
   font-family: 'Din #{$weight}', $helvetica;
 }
