@@ -68,6 +68,7 @@
   }
 
   nav {
+    background: $steel;
     border-top: 3px solid $gold;
   }
 
@@ -75,10 +76,6 @@
     font-size: em(18);
     padding: 0;
     text-align: center;
-  }
-
-  .nav-item.fa {
-    display: none;
   }
 
   .logo {
@@ -90,15 +87,7 @@
   }
 
   .nav-inner {
-    display: table;
-    text-align: center;
-  }
-
-  .nav-item {
-    display: table-cell;
-    margin: 0;
-    padding: em(20) 0;
-    width: 20%;
+    display: none;
   }
 }
 

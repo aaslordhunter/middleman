@@ -1,6 +1,11 @@
 var anchoredSection = $('.js-anchor');
+var breakPoint1 = 900;
 var contactButton = $('.js-contact-button');
 var contactSection = $('.js-contact-section');
+var contactSectionHeight = contactSection.height();
+var contentMaxWidth = parseInt($('.js-wrap').css('max-width'))
+var footer = $('.js-footer')
+var footerHeight = footer.height();
 var fadeIn = $('.js-fade-in');
 var navLink = $('.js-nav-link');
 var navItem = navLink.parent();
@@ -22,12 +27,14 @@ $(window).load(function() {
   if (!onMobileDevice) {
     activateNavOnPageLoad();
     setHeaderSectionHeight();
+    setContactSectionHeight();
   };
 });
 
 $(window).resize(function() {
   if (!onMobileDevice) {
     setHeaderSectionHeight();
+    setContactSectionHeight();
   };
 });
 
@@ -82,24 +89,37 @@ function fadeInPage() {
   fadeIn.addClass('fade-in');
 }
 
+function setContactSectionHeight() {
+  var contactSectionPadding = parseInt(contactSection.css('padding-top'))*2;
+  var windowHeightMinusFooter = $(window).height() - footerHeight;
+  var contactSectionLargerThanWindowHeightMinusFooter = contactSectionHeight < windowHeightMinusFooter;
+  var windowWidth = $(window).width();
+  var windowWide = windowWidth > breakPoint1;
+  var contactSectionAdjustable = contactSectionLargerThanWindowHeightMinusFooter && windowWide;
+
+  if (contactSectionAdjustable) {
+    contactSection.height($(window).height() - footerHeight - contactSectionPadding);
+  } else {
+    contactSection.css('height', 'auto');
+  }
+}
+
 function setHeaderSectionHeight() {
-  var contentMaxWidth = parseInt($('.js-wrap').css('max-width'))
   var header = $('.js-header');
   var headerInner= $('.js-header-inner');
   var headerInnerHeight = headerInner.height();
-  var logoHeight = $('.js-logo').outerHeight();
   var windowHeight = $(window).height();
-  var windowHeightMinusLogo = windowHeight - logoHeight;
+  var windowHeightMinusFooter = windowHeight - footerHeight;
   var windowWidth = $(window).width();
-  var windowTall = windowHeightMinusLogo > headerInnerHeight;
+  var windowTall = windowHeightMinusFooter > headerInnerHeight;
   var windowWide = windowWidth > contentMaxWidth;
   var headerAdjustable = windowWide && windowTall;
 
   if (headerAdjustable) {
-    header.height(windowHeightMinusLogo);
+    header.height(windowHeightMinusFooter);
     header.removeClass('header-padding');
     header.addClass('header-unpadded');
-    headerInner.css('padding-top', (windowHeightMinusLogo - headerInnerHeight)/2);
+    headerInner.css('padding-top', (windowHeightMinusFooter - headerInnerHeight)/2);
   } else {
     header.css('height', 'auto')
     header.removeClass('header-unpadded');

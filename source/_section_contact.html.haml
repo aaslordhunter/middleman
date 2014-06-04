@@ -1,22 +1,21 @@
-#contact.js-anchor.js-contact-section
-  %section.bg-navy
+#contact.bg-navy.js-anchor.js-contact-section
+  %section
     .wrap
       %h3
         %i.fa.fa-paper-plane
       %h2
         = mail_to gmail_address, 'Email', class: 'text-link'
 
-      %h3.emdash-on-navy
+      .emdash-on-navy
+
+      %h3
         %i.fa.fa-linkedin
       %h2
         = link_to 'LinkedIn', linkedin_url, target: '_blank', class: 'text-link'
 
-      %h3.emdash-on-navy
-        %i.fa.fa-pencil
-      %h2
-        = link_to 'Blog', blog_url, target: '_blank', class: 'text-link'
+      .emdash-on-navy
 
-      %h3.emdash-on-navy
-        %i.fa.fa-github
+      %h3
+        %i.fa.fa-phone
       %h2
-        = link_to 'GitHub', github_url, target: '_blank', class: 'text-link'
+        = '860-918-5895'

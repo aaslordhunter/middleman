@@ -20,13 +20,37 @@ en:
   about_title:
     About Me
   about_description:
-    My Father is a Nuclear Engineer and my Mother is an Accountant, so even though I'm creative, I
-    approach every design problem with math, science, and a mechanical pencil.
+    Hi, my name is Ali Aas. My last name is Norweigian for "hill" and is pronounced "Oz", like the wizard. 
+    I got my start in the design industry back in 2006 when I built my first website using Dreamweaver and lots 
+    of tables. Eight years later, after a design degree and a short relationship with Wordpress, 
+    I've found serenity working with Ruby on Rails in the startup space. Outside of work, I am passionate about 
+    dachshunds, New England, and Peggy Olson.
 
   projects_title:
     Projects
+
   project_business_site_title:
     LevelUp Business Site
   project_business_site_description:
-    My Father is a Nuclear Engineer and my Mother is an Accountant, so even though I'm creative, I
-    approach every design problem with math, science, and a mechanical pencil.
+    The previous iteration of the LevelUp Business Site was clunky and disjointed. It used three pages
+    to explain the product, which resulted in the confusion of potential merchants. In order to create 
+    a more digestible experience, the Business Site was condensed into one single
+    scroll navigation page, with ease of accesibilty through the inclusion of a sticky highlighting navbar
+    and through the color coding of each section.
+
+  project_icon_set_title:
+    LevelUp Icon Set
+  project_icon_set_description:
+    Before building this icon set, the LevelUp design team had no standards for icon size and style.
+    Each designer would build a one-off set for each application, which resulted in a muddled
+    aesthetic site-wide. Conversely, the new icon set provides continuity by establishing guiding principles
+    and by accentuating the simplicity of the brand identity through the use of geometric shapes and lines.
+
+  project_self_enrollment_title:
+    LevelUp Self-Enrollment Site
+  project_self_enrollment_description:
+    In order to on-board businesses faster, LevelUp plans to build a Self-Enrollment "Wizard" that
+    allows potential merchants to apply on their own. The intention for the layout of this page is to closly match the design of the Merchant Dashboard,
+    so the merchants who are converted are already familiar with the UI. Additionally, the sections
+    do not need to be completed in order, so the navigation hints at a progression through the change in
+    color, but does not attempt to force the user through a linear path.

@@ -22,3 +22,22 @@ $steel: #5E6A72;
   -khtml-opacity: $trans;
   opacity: $trans;
 }
+
+@mixin icon($y_pos) {
+  @include icon-background(0px, $y_pos);
+
+  &.icon-white { @include icon-background(-40px, $y_pos) }
+  &.icon-red { @include icon-background(-80px, $y_pos) }
+  &.icon-orange { @include icon-background(-120px, $y_pos) }
+  &.icon-green { @include icon-background(-160px, $y_pos) }
+  &.icon-bright-blue { @include icon-background(-200px, $y_pos) }
+  &.icon-blue { @include icon-background(-240px, $y_pos) }
+}
+
+@mixin icon-background($x_pos, $y_pos) {
+  background-image: -webkit-image-set(
+    image-url('icon_sprite.png') 1x,
+    image-url('icon_sprite_@2x.png') 2x);
+  background-position: $x_pos ($y_pos * -40px);
+  background-size: 280px;
+}
