@@ -11,12 +11,16 @@ module CustomHelpers
     '//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.css'
   end
 
+  def github_url
+    'https://github.com/aaslordhunter/'
+  end
+
   def gmail_address
     'aas.alexandra@gmail.com'
   end
 
-  def github_url
-    'https://github.com/aaslordhunter/'
+  def google_fonts_stylesheet_link_tag(family)
+    stylesheet_link_tag "https://fonts.googleapis.com/css?family=#{family}"
   end
 
   def linkedin_url

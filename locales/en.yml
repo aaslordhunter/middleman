@@ -5,13 +5,8 @@ en:
   title:
     Ali Aas - UX / Front-End
 
-  flash_error:
-    Sorry, there was a problem with the form. Please try again.
-  flash_success:
-    Thanks for filling out the form. I'll be in touch soon!
-
   header_title:
-    UX Designer & Front-End Developer
+    Designer / Developer
   header_subtitle:
     Currently employed at
   header_cta:
@@ -20,37 +15,35 @@ en:
   about_title:
     About Me
   about_description:
-    Hi, my name is Ali Aas. My last name is Norweigian for "hill" and is pronounced "Oz", like the wizard. 
+    Hi, my name is Ali Aas. My last name means "hill" in Norweigian and is pronounced "Oz", like the wizard. 
     I got my start in the design industry back in 2006 when I built my first website using Dreamweaver and lots 
     of tables. Eight years later, after a design degree and a short relationship with Wordpress, 
-    I've found serenity working with Ruby on Rails in the startup space. Outside of work, I enjoy 
-    dachshunds, New England, and Peggy Olson.
+    I've found serenity working with Ruby on Rails in the Boston startup space. Outside of work, I enjoy 
+    dachshunds, New England, Mad Men, and cooking.
 
   projects_title:
     Projects
 
   project_business_site_title:
-    LevelUp Business Site
+    LevelUp Business
   project_business_site_description:
-    The previous iteration of the LevelUp Business Site was clunky and disjointed. It used three pages
-    to explain the product, which resulted in the confusion of potential merchants. In order to create 
+    The previous iteration of the LevelUp Business Site was clunky and disjointed because
+    the information was spread across 4 different pages. In order to create 
     a more digestible experience, the Business Site was condensed into one single
-    scroll navigation page, with ease of accesibilty through the inclusion of a sticky highlighting navbar
-    and through the color coding of each section.
+    scroll navigation page, with ease of accesibilty through the use of color coded sections and iconography.
 
   project_icon_set_title:
-    LevelUp Icon Set
+    LevelUp Iconography
   project_icon_set_description:
     Before building this icon set, the LevelUp design team had no standards for icon size and style.
     Each designer would build a one-off set for each application, which resulted in a muddled
-    aesthetic site-wide. Conversely, the new icon set provides continuity by establishing guiding principles
+    aesthetic site-wide. The new icon set provides continuity by establishing guiding principles
     and by accentuating the simplicity of the brand identity through the use of geometric shapes and lines.
 
   project_self_enrollment_title:
-    LevelUp Self-Enrollment Site
+    LevelUp Self-Enrollment
   project_self_enrollment_description:
-    In order to on-board businesses faster, LevelUp plans to build a Self-Enrollment "Wizard" that
-    allows potential merchants to apply on their own. The intention for the layout of this page is to closly match the design of the Merchant Dashboard,
-    so the merchants who are converted are already familiar with the UI. Additionally, the sections
-    do not need to be completed in order, so the navigation hints at a progression through the change in
-    color, but does not attempt to force the user through a linear path.
+    In order to on-board businesses faster, LevelUp plans to build a Self-Enrollment "Wizard" The sections of the "wizard"
+    can be filled out in any order and timeframe, so the sidebar alludes to
+    a progression bar while not forcing the user down a linear path. Additionally, the layout matches the
+    layout for the Merchant Dashboard, so approved merchants can easily transition from one experience to the next.

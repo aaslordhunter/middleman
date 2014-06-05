@@ -3,7 +3,6 @@ var breakPoint1 = 900;
 var contactButton = $('.js-contact-button');
 var contactSection = $('.js-contact-section');
 var contactSectionHeight = contactSection.height();
-var contentMaxWidth = parseInt($('.js-wrap').css('max-width'))
 var footer = $('.js-footer')
 var footerHeight = footer.height();
 var fadeIn = $('.js-fade-in');
@@ -26,14 +25,13 @@ $(window).load(function() {
 
   if (!onMobileDevice) {
     activateNavOnPageLoad();
-    setHeaderSectionHeight();
     setContactSectionHeight();
   };
 });
 
 $(window).resize(function() {
   if (!onMobileDevice) {
-    setHeaderSectionHeight();
+    activateNavOnPageLoad();
     setContactSectionHeight();
   };
 });
@@ -101,30 +99,6 @@ function setContactSectionHeight() {
     contactSection.height($(window).height() - footerHeight - contactSectionPadding);
   } else {
     contactSection.css('height', 'auto');
-  }
-}
-
-function setHeaderSectionHeight() {
-  var header = $('.js-header');
-  var headerInner= $('.js-header-inner');
-  var headerInnerHeight = headerInner.height();
-  var windowHeight = $(window).height();
-  var windowHeightMinusFooter = windowHeight - footerHeight;
-  var windowWidth = $(window).width();
-  var windowTall = windowHeightMinusFooter > headerInnerHeight;
-  var windowWide = windowWidth > contentMaxWidth;
-  var headerAdjustable = windowWide && windowTall;
-
-  if (headerAdjustable) {
-    header.height(windowHeightMinusFooter);
-    header.removeClass('header-padding');
-    header.addClass('header-unpadded');
-    headerInner.css('padding-top', (windowHeightMinusFooter - headerInnerHeight)/2);
-  } else {
-    header.css('height', 'auto')
-    header.removeClass('header-unpadded');
-    header.addClass('header-padding');
-    headerInner.css('padding-top', 0);
   }
 }
 

@@ -1,0 +1,54 @@
+@import '_elements';
+
+.icon {
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+  margin: 20px;
+
+  &.icon-mobile-payments { @include icon(0) }
+  &.icon-analytics { @include icon(1) }
+  &.icon-campaigns { @include icon(2) }
+  &.icon-platform { @include icon(3) }
+  &.icon-app-icon { @include icon(4) }
+  &.icon-credit-card { @include icon(5) }
+  &.icon-scanner { @include icon(6) }
+  &.icon-no-chargebacks { @include icon(7) }
+  &.icon-browser { @include icon(8) }
+  &.icon-mobile-app { @include icon(9) }
+  &.icon-loyalty { @include icon(10) }
+  &.icon-receipt { @include icon(11) }
+  &.icon-profile { @include icon(12) }
+  &.icon-support { @include icon(13) }
+  &.icon-email-notification { @include icon(14) }
+  &.icon-scan { @include icon(15) }
+  &.icon-transaction-history { @include icon(16) }
+  &.icon-fraud-protection { @include icon(17) }
+  &.icon-gift-cards { @include icon(18) }
+  &.icon-feedback { @include icon(19) }
+  &.icon-payment-processing { @include icon(20) }
+  &.icon-one-account { @include icon(21) }
+  &.icon-email-receipt { @include icon(22) }
+  &.icon-registration { @include icon(23) }
+  &.icon-loyalty-migration { @include icon(24) }
+  &.icon-ordering { @include icon(25) }
+  &.icon-places { @include icon(26) }
+  &.icon-menu { @include icon(27) }
+  &.icon-refer-a-friend { @include icon(28) }
+  &.icon-security { @include icon(29) }
+  &.icon-plastic-cards { @include icon(30) }
+  &.icon-faq { @include icon(31) }
+  &.icon-ibeacon { @include icon(32) }
+  &.icon-promotion { @include icon(33) }
+  &.icon-tablet { @include icon(34) }
+  &.icon-iphone { @include icon(35) }
+  &.icon-android { @include icon(36) }
+  &.icon-plus-sign { @include icon(37) }
+}
+
+.icon-wrapper {
+  background: #FFF;
+  border-radius: 3px;
+  margin-top: 3.125em;
+  text-align: center;
+}
