@@ -52,9 +52,10 @@
           .icon.icon-iphone.icon-red
           .icon.icon-android.icon-orange
 
-      %article.project
-        .emdash-gold
-        %h3= t(:project_more_title)
-        .center
-          %p= t(:project_more_description)
-          %p= link_to t(:project_more_cta), old_portfolio_url, class: 'text-link', target: '_blank'
+      .hide-mobile
+        %article.project
+          .emdash-gold
+          %h3= t(:project_more_title)
+          .center
+            %p= t(:project_more_description)
+            %p= link_to t(:project_more_cta), old_portfolio_url, class: 'text-link', target: '_blank'

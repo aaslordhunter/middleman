@@ -125,9 +125,19 @@
     }
   }
 
+  .hide-mobile {
+    display: none;
+  }
+
   .text-link {
     &:hover {
       background: none;
     }
+  }
+
+  a[href^=tel] {
+    border-bottom: 2px solid $gold;
+    color: inherit;
+    text-decoration: none;
   }
 }
