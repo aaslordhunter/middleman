@@ -57,7 +57,11 @@
 
 @media only screen and (max-width: 600px) {
   h2 {
-    font-size: em(27);
+    font-size: em(32);
+
+    &.on-dark {
+      font-size: em(27);
+    }
   }
 
   h3 {
