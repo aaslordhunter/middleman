@@ -32,6 +32,13 @@ en:
     a more digestible experience, the Business Site was condensed into one single
     scroll navigation page, with ease of accesibilty through the use of color coded sections and iconography.
 
+  project_more_title:
+    Older Work
+  project_more_description:
+    Interested in seeing some older work?
+  project_more_cta:
+    View my 2012 Portfolio.
+
   project_icon_set_title:
     LevelUp Iconography
   project_icon_set_description:
@@ -43,7 +50,7 @@ en:
   project_self_enrollment_title:
     LevelUp Self-Enrollment
   project_self_enrollment_description:
-    In order to on-board businesses faster, LevelUp plans to build a Self-Enrollment "Wizard" The sections of the "wizard"
+    In order to on-board businesses faster, LevelUp plans to build a Self-Enrollment "Wizard". The sections of the "wizard"
     can be filled out in any order and timeframe, so the sidebar alludes to
     a progression bar while not forcing the user down a linear path. Additionally, the layout matches the
     layout for the Merchant Dashboard, so approved merchants can easily transition from one experience to the next.

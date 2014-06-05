@@ -51,11 +51,15 @@
   }
 
   .wrap {
-    padding: 0 5%;
+    padding: 0 7%;
   }
 }
 
 @media only screen and (max-width: 600px) {
+  h2 {
+    font-size: em(30);
+  }
+
   header,
   section {
     padding: em(50) 0;
@@ -71,6 +75,8 @@
   }
 
   p {
+    font-size: em(16);
+    line-height: em(30, 16);
     padding: 0;
   }
 

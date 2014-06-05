@@ -19,6 +19,10 @@ h2 {
   font-family: "futura-pt-1","futura-pt-2", $helvetica;
   font-size: em(40);
   text-align: center;
+
+  &.on-dark {
+    font-weight: 700;
+  }
 }
 
 h3 {
