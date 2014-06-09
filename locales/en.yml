@@ -32,6 +32,16 @@ en:
     a more digestible experience, the Business Site was condensed into one single
     scroll navigation page, with ease of accesibilty through the use of color coded sections and iconography.
 
+  project_campaign_builder_title:
+    LevelUp Campaign Builder
+  project_campaign_builder_description:
+    The goal of the Campaign Builder is to make it easy for merchants to create functional
+    campaigns without the support of a LevelUp team member. Accesibilty is achieved through
+    the use of a preview screen, which updates each time the merchant changes a value. These
+    changes are further accentuated by a focus circle which shows where the content will
+    go. Additionally, the use of hints along the side helps to further hand-hold the
+    merchant, so they feel safe finalizing the transaction.
+
   project_more_title:
     Older Work
   project_more_description:

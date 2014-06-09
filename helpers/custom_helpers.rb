@@ -7,10 +7,6 @@ module CustomHelpers
     'http://blog.aliflynnaas.com/'
   end
 
-  def cellphone_number
-    '860-918-5895'
-  end
-
   def font_awesome_url
     '//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.css'
   end

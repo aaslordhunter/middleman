@@ -11,6 +11,10 @@
         description: t(:project_self_enrollment_description),
         browser: true, image_url: 'levelup_self_enrollment.png' }
 
+      = partial 'project', locals: { title: t(:project_campaign_builder_title),
+        description: t(:project_campaign_builder_description),
+        browser: true, image_url: 'levelup_campaign_builder.png' }
+
       %article.project
         .emdash-gold
         %h3= t(:project_icon_set_title)

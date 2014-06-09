@@ -1,10 +1,17 @@
 #contact.bg-coral.js-anchor.js-contact-section
   %section
     .wrap
-      %h3
-        %i.fa.fa-paper-plane
-      %h4
-        = mail_to gmail_address, 'Email', class: 'text-link'
+      .hide-mobile
+        %h3
+          %i.fa.fa-paper-plane
+        %h4
+          = mail_to gmail_address, gmail_address, class: 'text-link'
+
+      .hide-web
+        %h3
+          %i.fa.fa-paper-plane
+        %h4
+          = mail_to gmail_address, 'Email', class: 'text-link'
 
       .emdash-dark-coral
 
@@ -16,6 +23,6 @@
       .emdash-dark-coral
 
       %h3
-        %i.fa.fa-phone
+        %i.fa.fa-file-text
       %h4
-        = cellphone_number
+        = link_to 'Resume', 'aas_resume_2014.pdf', target: '_blank', class: 'text-link'
