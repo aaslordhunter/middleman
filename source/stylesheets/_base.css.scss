@@ -99,7 +99,9 @@ p {
 
 small {
   display: table-cell;
+  font-family: 'Open Sans', $helvetica;
   font-size: em(15, 16);
+  font-weight: 600;
   line-height: em(25, 15);
   vertical-align: middle;
 }
