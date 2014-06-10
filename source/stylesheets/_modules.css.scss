@@ -44,7 +44,6 @@
   color: #222;
   display: inline-block;
   font-size: em(14);
-  font-weight: 600;
   margin-top: em(50, 14);
   padding: 10px 10px 8px 10px;
   text-decoration: none;
@@ -124,6 +123,7 @@
   @include transition (all 500ms ease-in-out);
   color: #777;
   display: inline-block;
+  font-family: 'Open Sans', $helvetica;
   font-size: em(14, 16);
   font-weight: 600;
   text-decoration: none;

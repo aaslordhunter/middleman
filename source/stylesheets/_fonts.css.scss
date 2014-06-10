@@ -1,10 +1,16 @@
 @font-face {
-    font-family: 'Orator';
+  font-family: 'Kondolar';
+    src: url('webfonts/2B1F36_0_0.eot');
+    src: url('webfonts/2B1F36_0_0.eot?#iefix') format('embedded-opentype'),
+         url('webfonts/2B1F36_0_0.woff') format('woff'),
+         url('webfonts/2B1F36_0_0.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Orator';
     src: url('../fonts/orator.eot');
     src: url('../fonts/orator.eot?#iefix') format('embedded-opentype'),
          url('../fonts/orator.woff') format('woff'),
          url('../fonts/orator.ttf') format('truetype'),
          url('../fonts/orator.svg#dinbold') format('svg');
-    font-weight: normal;
-    font-style: normal;
 }

@@ -4,6 +4,7 @@ $gold: #FFC529;
 
 @mixin emdash {
   content: "\2014";
+  font-family: 'Open Sans', $helvetica;
   font-size: 40px;
   font-weight: 600;
   display: block;
