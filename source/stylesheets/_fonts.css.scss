@@ -1,9 +1,10 @@
 @font-face {
   font-family: 'Kondolar';
-    src: url('webfonts/2B1F36_0_0.eot');
-    src: url('webfonts/2B1F36_0_0.eot?#iefix') format('embedded-opentype'),
-         url('webfonts/2B1F36_0_0.woff') format('woff'),
-         url('webfonts/2B1F36_0_0.ttf') format('truetype');
+    src: url('../fonts/kondolar.eot');
+    src: url('../fonts/kondolar.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/kondolar.woff') format('woff'),
+         url('../fonts/kondolar.ttf') format('truetype'),
+         url('../fonts/kondolar.svg#kondolar') format('svg');
 }
 
 @font-face {
@@ -12,5 +13,5 @@
     src: url('../fonts/orator.eot?#iefix') format('embedded-opentype'),
          url('../fonts/orator.woff') format('woff'),
          url('../fonts/orator.ttf') format('truetype'),
-         url('../fonts/orator.svg#dinbold') format('svg');
+         url('../fonts/orator.svg#orator') format('svg');
 }

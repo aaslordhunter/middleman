@@ -41,7 +41,7 @@
   .nav-item {
     border-right: 0 !important;
     display: inline-block;
-    margin-left: 2em; /* 32 / 16 */
+    margin-left: em(32, 16);
     padding: 0;
   }
 
