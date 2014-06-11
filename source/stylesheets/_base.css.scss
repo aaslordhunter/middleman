@@ -9,7 +9,7 @@ html {
 
 body {
   background: #F8F8F8;
-  color: #777;
+  color: #555;
   font-family: 'Kondolar', 'Open Sans', $helvetica;
 }
 
@@ -36,7 +36,7 @@ h3 {
 h4 {
   color: #FFF;
   font-size: em(36);
-  margin-bottom: 15px;
+  margin-bottom: em(15, 36);
   text-align: center;
 }
 
@@ -50,11 +50,10 @@ h5 {
 h6 {
   border: 3px solid $gold;
   color: #FFF;
-  display: table;
   font-family: 'Orator';
   font-size: em(30);
   margin: 0 auto em(60, 30) auto;
-  padding: 21px 0 15px 0;
+  padding: em(21, 30) 0 em(15, 30) 0;
   text-align: center;
   text-transform: lowercase;
   width: 96px;
@@ -88,7 +87,6 @@ nav {
   height: 100%;
   position: fixed;
   width: 150px;
-  z-index: 500;
 }
 
 p {

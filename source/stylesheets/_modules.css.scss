@@ -120,7 +120,7 @@
 }
 
 .nav-link {
-  @include transition (all 500ms ease-in-out);
+  @include transition (all 250ms ease-in-out);
   color: #777;
   display: inline-block;
   font-family: 'Open Sans', $helvetica;
@@ -139,7 +139,7 @@
 }
 
 .text-link {
-  @include transition (all 500ms ease-in-out);
+  @include transition (all 250ms ease-in-out);
   border-bottom: 2px solid $gold;
   color: inherit;
   text-decoration: none;
