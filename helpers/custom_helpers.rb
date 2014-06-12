@@ -1,10 +1,6 @@
 module CustomHelpers
   def old_portfolio_url
-    'http://aliflynnaas.com/2012'
-  end
-
-  def blog_url
-    'http://blog.aliflynnaas.com/'
+    'http://ali-aas.com/2012/'
   end
 
   def font_awesome_url
