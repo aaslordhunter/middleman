@@ -15,8 +15,8 @@ module CustomHelpers
     'https://github.com/aaslordhunter/'
   end
 
-  def gmail_address
-    'aas.alexandra@gmail.com'
+  def email_address
+    'hi@ali-aas.com'
   end
 
   def google_fonts_stylesheet_link_tag(family)
