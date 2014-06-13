@@ -2,7 +2,6 @@ var anchoredSection = $('.js-anchor');
 var breakPoint1 = 900;
 var contactButton = $('.js-contact-button');
 var contactSection = $('.js-contact-section');
-var contactSectionHeight = contactSection.height();
 var footer = $('.js-footer')
 var footerHeight = footer.height();
 var fadeIn = $('.js-fade-in');
@@ -90,10 +89,11 @@ function fadeInPage() {
 function setContactSectionHeight() {
   var contactSectionPadding = parseInt(contactSection.css('padding-top'))*2;
   var windowHeightMinusFooter = $(window).height() - footerHeight;
-  var contactSectionLargerThanWindowHeightMinusFooter = contactSectionHeight < windowHeightMinusFooter;
+  var contactSectionHeight = contactSection.height();
+  var contactSectionSmallerThanWindowHeightMinusFooter = contactSectionHeight < windowHeightMinusFooter;
   var windowWidth = $(window).width();
   var windowWide = windowWidth > breakPoint1;
-  var contactSectionAdjustable = contactSectionLargerThanWindowHeightMinusFooter && windowWide;
+  var contactSectionAdjustable = contactSectionSmallerThanWindowHeightMinusFooter && windowWide;
 
   if (contactSectionAdjustable) {
     contactSection.height($(window).height() - footerHeight - contactSectionPadding);
