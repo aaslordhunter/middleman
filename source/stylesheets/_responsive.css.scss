@@ -22,12 +22,17 @@
 
   .logo {
     background: $gold;
-    color: #222;
+    color: #333;
     font-size: em(24);
     height: 62px;
     padding-top: 18px;
     position: relative;
     width: 80px;
+
+    &:hover {
+      background: #333;
+      color: $gold;
+    }
   }
 
   .nav-inner {
@@ -45,9 +50,16 @@
     padding: 0;
   }
 
-  .nav-link,
-  .nav-link.active {
+  .nav-link {
     color: #777;
+
+    &.active {
+      color: #777;
+    }
+
+    &:hover {
+      color: #FFF;
+    }
   }
 
   .wrap {
@@ -92,8 +104,12 @@
     padding: 0;
   }
 
-  .header-logo {
+  .hide-mobile {
     display: none;
+  }
+
+  .hide-web {
+    display: block;
   }
 
   .logo {
@@ -102,6 +118,11 @@
     margin: 0 auto;
     padding-top: 8px;
     width: 70px;
+
+    &:hover {
+      background: $gold;
+      color: #333;
+    }
   }
 
   .nav-inner {
@@ -123,14 +144,6 @@
       border-top: none;
       border-bottom: 2px solid $dark-coral;
     }
-  }
-
-  .hide-mobile {
-    display: none;
-  }
-
-  .hide-web {
-    display: block;
   }
 
   .text-link {
