@@ -104,7 +104,7 @@ function setContactSectionHeight() {
 
 function scrollToContactSection() {
   $(window).unbind('.scrollNav');
-  $('body').animate({ scrollTop: Math.ceil(contactSection.offset().top) }, 500,
+  $('body,html').animate({ scrollTop: Math.ceil(contactSection.offset().top) }, 500,
     function() {
       $(window).bind("scroll.scrollNav", function() { checkCurrentSectionOnScroll() });
     }
