@@ -56,7 +56,7 @@ function activateLinkAndScrollToAnchor(clickedNavLink) {
   updateNav(activeNavLink, activeNavItem);
   
   $(window).unbind('.scrollNav');
-  $('body').animate({ scrollTop: Math.ceil($(targetAnchorId).offset().top) }, 500,
+  $('body,html').animate({ scrollTop: Math.ceil($(targetAnchorId).offset().top) }, 500,
     function() { 
       $(window).bind("scroll.scrollNav", function() { checkCurrentSectionOnScroll() });
   });
