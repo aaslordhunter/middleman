@@ -70,7 +70,7 @@
 
 .fade-in {
   @include opacity(1);
-  @include transition (all 1000ms ease-in-out);
+  @include transition (opacity 1000ms ease-in-out);
 }
 
 .logo {
