@@ -14,10 +14,16 @@
     right: auto;
   }
 
+  header {
+    padding: em(230) 0 em(150) 0;
+  }
+
   nav {
     @include size(100% auto);
+    background: rgba(51, 51, 51, .92);
     display: table;
-    position: relative;
+    position: fixed;
+    z-index: 1000;
   }
 
   .logo {
@@ -51,15 +57,7 @@
   }
 
   .nav-link {
-    color: #777;
-
-    &.active {
-      color: #777;
-    }
-
-    &:hover {
-      color: #FFF;
-    }
+    color: #999;
   }
 
   .wrap {
@@ -96,6 +94,7 @@
   nav {
     background: $coral;
     border-top: 3px solid $gold;
+    position: relative;
   }
 
   p {

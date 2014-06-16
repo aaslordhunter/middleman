@@ -32,6 +32,7 @@ $gold: #FFC529;
 }
 
 @mixin icon-background($x_pos, $y_pos) {
+  background-image: image-url('icon_sprite.png');
   background-image: -webkit-image-set(
     image-url('icon_sprite.png') 1x,
     image-url('icon_sprite_@2x.png') 2x);
