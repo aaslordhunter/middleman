@@ -3,7 +3,7 @@
     .wrap
       %h2= t :projects_title
 
-      = partial 'project', locals: { title: t(:project_business_site_title), 
+      = partial 'project', locals: { title: t(:project_business_site_title),
         description: t(:project_business_site_description),
         browser: true, image_url: 'levelup_business.jpg' }
 
@@ -14,6 +14,18 @@
       = partial 'project', locals: { title: t(:project_campaign_builder_title),
         description: t(:project_campaign_builder_description),
         browser: true, image_url: 'levelup_campaign_builder.png' }
+
+      = partial 'project', locals: { title: t(:project_interstitials_title),
+        description: t(:project_interstitials_description),
+        browser: true, image_url: 'levelup_interstitials.png' }
+
+      = partial 'project', locals: { title: t(:project_campaign_claim_title),
+        description: t(:project_campaign_claim_description),
+        browser: true, image_url: 'levelup_campaign_claim.png' }
+
+      = partial 'project', locals: { title: t(:project_campaigns_page_title),
+        description: t(:project_campaigns_page_description),
+        browser: true, image_url: 'levelup_campaigns_page.png' }
 
       %article.project
         .emdash-gold
