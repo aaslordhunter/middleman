@@ -8,14 +8,14 @@
     %link(rel='icon' href='images/favicon.png')
     %link(rel='stylesheet' href=font_awesome_url)
     %title= t :title
-    = google_fonts_stylesheet_link_tag('Open+Sans:400,600,700,800,300')
+    = google_fonts_stylesheet_link_tag('Open+Sans:400,600')
     = stylesheet_link_tag 'index'
     = partial 'vendor_scripts'
 
   %body
     %nav
-      = link_to('index.html', class: 'logo') do
-        %h1= 'Ali Aas'
+      = link_to 'index.html' do
+        = partial 'nav_logo'
       %ul.nav-inner
         %li.nav-item
           = section_link('About')
@@ -24,14 +24,14 @@
         %li.nav-item
           = section_link('Contact')
 
-    %main.js-fade-in
+    %main
       = yield
       %footer.js-footer
         %small
-          &copy; 2014 Alexandra Flynn Aas
+          = t :footer_copyright
           %br
-          Built using
+          = t :footer_middleman
           = link_to 'Middleman', repo_url, target: '_blank', class: 'text-link'
 
-    = google_javascript_include_tag 'jquery', '1.7.1'
+    = google_javascript_include_tag 'jquery', '2.1.4'
     = javascript_include_tag 'init'

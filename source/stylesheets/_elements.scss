@@ -1,0 +1,32 @@
+$coral: #F25F37;
+$dark-coral: darken($coral, 5%);
+$futura: 'futura-pt-1', 'futura-pt-2', sans-serif;
+$gold: #FFC529;
+$open-sans: 'Open Sans', $helvetica;
+
+@mixin orator {
+  font-family: 'orator-std-1', 'orator-std-2', sans-serif;
+  text-transform: lowercase;
+}
+
+@mixin emdash {
+  content: "\2014";
+  font-family: $open-sans;
+  font-size: 40px;
+  font-weight: 600;
+  display: block;
+  margin: em(30) 0;
+}
+
+@mixin opacity($trans) {
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=#{$trans * 100})";
+  filter: alpha(opacity=($trans * 100));
+  -moz-opacity: $trans;
+  -khtml-opacity: $trans;
+  opacity: $trans;
+}
+
+@include keyframes(fade-in) {
+  from { @include opacity(0); }
+    to { @include opacity(1); }
+}

@@ -1,0 +1,85 @@
+@import 'bourbon';
+@import '_elements';
+
+html {
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  background: #F8F8F8;
+  color: #333;
+  font-family: $open-sans;
+  font-style: normal;
+  font-weight: 400;
+  text-align: center;
+}
+
+footer {
+  display: table;
+  height: 150px;
+  width: 100%;
+}
+
+h1 {
+  font-family: $futura;
+  font-size: em(50);
+  font-weight: 700;
+}
+
+h2 {
+  font-size: em(24);
+  font-weight: 600;
+  margin-top: 1em;
+}
+
+h3 {
+  font-family: $futura;
+  font-size: em(36);
+  line-height: em(54, 36);
+}
+
+header {
+  background: $coral;
+}
+
+header, section {
+  padding: em(150) 0;
+}
+
+main {
+  @include animation(fade-in 1.0s ease-in);
+  @include position(absolute, auto 0px auto 150px);
+}
+
+nav {
+  @include size(150px 100%);
+  background: #333;
+  position: fixed;
+}
+
+p {
+  color: #555;
+  font-size: em(24);
+  line-height: em(40, 24);
+  padding: 0 18%;
+}
+
+small {
+  display: table-cell;
+  font-family: $open-sans;
+  font-size: em(15);
+  font-weight: 600;
+  line-height: em(30, 15);
+  vertical-align: middle;
+}
+
+::selection {
+  color: #FFF;
+  background: $gold;
+}

@@ -1,14 +1,6 @@
 module CustomHelpers
-  def old_portfolio_url
-    'http://ali-aas.com/2012/'
-  end
-
   def font_awesome_url
-    '//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.css'
-  end
-
-  def github_url
-    'https://github.com/aaslordhunter/'
+    '//netdna.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.css'
   end
 
   def email_address
@@ -29,7 +21,11 @@ module CustomHelpers
   end
 
   def repo_url
-    github_url + 'middleman'
+    'https://github.com/aaslordhunter/middleman'
+  end
+
+  def resume_url
+    'aas_resume_2014.pdf'
   end
 
   def section_link(section_name)

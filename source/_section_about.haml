@@ -1,17 +1,17 @@
 #about.js-anchor
-  %header.bg-coral
+  %header.bg-coral.white-text
     .wrap
-      %h6.hide-mobile= 'Ali Aas'
-      %h2.white-text.on-dark= t :header_title
-      %h5.white-text
+      .hide-mobile
+        = partial 'header_logo'
+      %h1= t :header_title
+      %h2
         = t :header_subtitle
         = link_to 'LevelUp', 'https://www.thelevelup.com/', target: '_blank', class: 'text-link'
-      .center
-        = link_to t(:header_cta), void, class: 'button js-contact-button'
+      = link_to t(:header_cta), void, class: 'button js-contact-button'
 
   %section
     .wrap
       = image_tag 'bio_image.png', class: 'bio-image'
-      %h2= t :about_title
+      %h1= t :about_title
       .emdash-gold
       %p= t :about_description

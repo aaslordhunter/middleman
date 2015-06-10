@@ -4,24 +4,17 @@ var contactButton = $('.js-contact-button');
 var contactSection = $('.js-contact-section');
 var footer = $('.js-footer')
 var footerHeight = footer.height();
-var fadeIn = $('.js-fade-in');
 var navLink = $('.js-nav-link');
 var navItem = navLink.parent();
 var onMobileDevice = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
 
-
-//
-
-
-$(window).bind("scroll.scrollNav", function() { 
+$(window).bind("scroll.scrollNav", function() {
   if (!onMobileDevice) {
     checkCurrentSectionOnScroll()
   };
 });
 
 $(window).load(function() {
-  fadeInPage();
-
   if (!onMobileDevice) {
     activateNavOnPageLoad();
     setContactSectionHeight();
@@ -38,10 +31,6 @@ $(window).resize(function() {
 contactButton.click(scrollToContactSection);
 navLink.click(function(){ activateLinkAndScrollToAnchor($(this)) });
 
-
-//
-
-
 function activateNavOnPageLoad() {
   $(window).scrollTop($(window).scrollTop() + 1);
   $(window).scrollTop($(window).scrollTop() - 1);
@@ -54,10 +43,10 @@ function activateLinkAndScrollToAnchor(clickedNavLink) {
   var targetAnchorId = '#' + targetAnchorName;
 
   updateNav(activeNavLink, activeNavItem);
-  
+
   $(window).unbind('.scrollNav');
   $('body,html').animate({ scrollTop: Math.ceil($(targetAnchorId).offset().top) }, 500,
-    function() { 
+    function() {
       $(window).bind("scroll.scrollNav", function() { checkCurrentSectionOnScroll() });
   });
 }
@@ -80,10 +69,6 @@ function checkCurrentSectionOnScroll() {
       updateNav(sectionNavLink, sectionNavItem);
     };
   });
-}
-
-function fadeInPage() {
-  fadeIn.addClass('fade-in');
 }
 
 function setContactSectionHeight() {

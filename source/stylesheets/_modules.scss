@@ -31,24 +31,23 @@
 
 .browser-header {
   background: #FFF;
-  border-bottom: 2px solid #FFF;
   font-size: 0;
   padding: 10px 0 10px 10px;
+  text-align: left;
 }
 
 .button {
-  @include transition (background 200ms ease-in-out);
+  @include transition(background 200ms ease-in-out);
   background: $gold;
   border-top: none;
   border-bottom: 2px solid $dark-coral;
   color: #222;
   display: inline-block;
-  font-family: 'Open Sans', $helvetica;
+  font-family: $open-sans;
   font-size: em(14);
   font-weight: 600;
-  margin-top: em(50, 14);
+  margin-top: em(50);
   padding: 10px;
-  text-decoration: none;
 
   &:hover {
     background: #FFF;
@@ -60,37 +59,10 @@
   }
 }
 
-.center {
-  text-align: center;
-}
-
 .fa {
   color: $gold;
-}
-
-.fade-in {
-  @include opacity(1);
-  @include transition (opacity 1000ms ease-in-out);
-}
-
-.logo {
-  @include size(150px 111px);
-  @include transition (background 200ms ease-in-out, color 200ms ease-in-out);
-  bottom: 0;
-  color: $gold;
-  display: block;
-  font-family: 'Orator';
-  font-size: em(40);
-  padding-top: 39px;
-  position: absolute;
-  text-align: center;
-  text-decoration: none;
-  text-transform: lowercase;
-  
-  &:hover {
-    background: $gold;
-    color: #333;
-  }
+  font-size: em(30);
+  margin-bottom: 1em;
 }
 
 .emdash-dark-coral:before {
@@ -101,6 +73,21 @@
 .emdash-gold:before {
   @include emdash;
   color: $gold;
+}
+
+.header-logo {
+  margin-bottom: em(50);
+  width: 100px;
+
+  path {
+    fill: $gold;
+  }
+
+  text {
+    @include orator;
+    fill: #FFF;
+    font-size: 30px;
+  }
 }
 
 .hide-web {
@@ -122,16 +109,42 @@
 }
 
 .nav-link {
-  @include transition (all 250ms ease-in-out);
+  @include transition(all 250ms ease-in-out);
   color: #777;
   display: inline-block;
-  font-family: 'Open Sans', $helvetica;
-  font-size: em(14, 16);
+  font-family: $open-sans;
+  font-size: em(14);
   font-weight: 600;
-  text-decoration: none;
 
   &.active, &:hover {
     color: #FFF;
+  }
+}
+
+.nav-logo {
+  @include position(absolute, auto auto 0px 0px);
+  width: 150px;
+
+  path {
+    @include transition(fill 200ms ease-in-out);
+    fill: #333;
+  }
+
+  text {
+    @include transition(fill 200ms ease-in-out);
+    @include orator;
+    fill: $gold;
+    font-size: 30px;
+  }
+
+  &:hover {
+    path {
+      fill: $gold;
+    }
+
+    text {
+      fill: #333;
+    }
   }
 }
 
@@ -141,11 +154,10 @@
 }
 
 .text-link {
-  @include transition (all 250ms ease-in-out);
+  @include transition(all 250ms ease-in-out);
   border-bottom: 2px solid $gold;
   color: inherit;
-  text-decoration: none;
-  
+
   &:hover {
     background: rgba(255, 197, 41, .3);
   }
