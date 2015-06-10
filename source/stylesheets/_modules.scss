@@ -59,12 +59,6 @@
   }
 }
 
-.fa {
-  color: $gold;
-  font-size: em(30);
-  margin-bottom: 1em;
-}
-
 .emdash-dark-coral:before {
   @include emdash;
   color: $dark-coral;
@@ -73,6 +67,12 @@
 .emdash-gold:before {
   @include emdash;
   color: $gold;
+}
+
+.fa {
+  color: $gold;
+  font-size: em(30);
+  margin-bottom: 1em;
 }
 
 .header-logo {

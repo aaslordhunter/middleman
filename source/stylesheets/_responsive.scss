@@ -26,14 +26,28 @@
     z-index: 1000;
   }
 
-  .logo {
-    background: $gold;
-    color: #333;
-    font-size: em(24);
-    height: 62px;
-    padding-top: 18px;
+  .nav-logo {
+    display: block;
     position: relative;
     width: 80px;
+
+    path {
+      fill: $gold;
+    }
+
+    text {
+      fill: #333;
+    }
+
+    &:hover {
+      path {
+        fill: none;
+      }
+
+      text {
+        fill: $gold;
+      }
+    }
   }
 
   .nav-inner {
@@ -47,7 +61,7 @@
   .nav-item {
     border-right: 0 !important;
     display: inline-block;
-    margin-left: em(32, 16);
+    margin-left: em(32);
     padding: 0;
   }
 
@@ -61,16 +75,16 @@
 }
 
 @media only screen and (max-width: 600px) {
-  h2 {
+  h1 {
     font-size: em(32);
   }
 
-  h3 {
-    font-size: em(22);
+  h2 {
+    font-size: em(18);
   }
 
-  h5 {
-    font-size: em(18);
+  h3 {
+    font-size: em(24);
   }
 
   header,
@@ -94,6 +108,12 @@
     padding: 0;
   }
 
+  .emdash-dark-coral:before,
+  .emdash-gold:before {
+    margin: em(10) 0;
+  }
+
+
   .hide-mobile {
     display: none;
   }
@@ -102,11 +122,8 @@
     display: block;
   }
 
-  .logo {
-    font-size: 24px;
-    height: 57px;
+  .nav-logo {
     margin: 0 auto;
-    padding-top: 8px;
     width: 70px;
   }
 
