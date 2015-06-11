@@ -14,7 +14,7 @@
     right: auto;
   }
 
-  header {
+  header, section {
     padding: em(230) 0 em(150) 0;
   }
 
@@ -32,11 +32,11 @@
     width: 80px;
 
     path {
-      fill: $gold;
+      fill: $secondary;
     }
 
     text {
-      fill: #333;
+      fill: $dark-gray;
     }
 
     &:hover {
@@ -45,7 +45,7 @@
       }
 
       text {
-        fill: $gold;
+        fill: $secondary;
       }
     }
   }
@@ -61,12 +61,8 @@
   .nav-item {
     border-right: 0 !important;
     display: inline-block;
-    margin-left: em(32);
+    margin-left: em(30);
     padding: 0;
-  }
-
-  .nav-link {
-    color: #999;
   }
 
   .wrap {
@@ -79,12 +75,12 @@
     font-size: em(32);
   }
 
-  h2 {
-    font-size: em(18);
+  h2, h3 {
+    font-size: em(24);
   }
 
-  h3 {
-    font-size: em(24);
+  h4 {
+    font-size: em(18);
   }
 
   header,
@@ -92,27 +88,22 @@
     padding: em(50) 0;
   }
 
-  main {
-    @include opacity(1);
-  }
-
   nav {
-    background: $coral;
-    border-top: 3px solid $gold;
+    background: $primary;
+    border-top: 3px solid $secondary;
     position: relative;
   }
 
   p {
-    font-size: em(16);
-    line-height: em(30, 16);
+    font-size: em(24);
+    line-height: em(36, 24);
     padding: 0;
   }
 
-  .emdash-dark-coral:before,
-  .emdash-gold:before {
+  .emdash-primary-shade:before,
+  .emdash-secondary:before {
     margin: em(10) 0;
   }
-
 
   .hide-mobile {
     display: none;
@@ -135,17 +126,6 @@
 @media only screen and (max-device-width: 600px) {
   a {
     -webkit-tap-highlight-color: rgba(255, 197, 41, .8);
-  }
-
-  .button {
-    &:hover {
-      background: $gold;
-    }
-
-    &:active {
-      border-top: none;
-      border-bottom: 2px solid $dark-coral;
-    }
   }
 
   .text-link {

@@ -1,13 +1,22 @@
-$coral: #F25F37;
-$dark-coral: darken($coral, 5%);
+/* Colors */
+
+$dark-gray: #333;
+$primary: #FF5722;
+$primary-shade: #E64A19;
+$secondary: #FFC107;
+
+
+/* Typography */
+
 $futura: 'futura-pt-1', 'futura-pt-2', sans-serif;
-$gold: #FFC529;
 $open-sans: 'Open Sans', $helvetica;
 
 @mixin orator {
   font-family: 'orator-std-1', 'orator-std-2', sans-serif;
   text-transform: lowercase;
 }
+
+/* General */
 
 @mixin emdash {
   content: "\2014";
@@ -26,7 +35,18 @@ $open-sans: 'Open Sans', $helvetica;
   opacity: $trans;
 }
 
+@mixin trans($property) {
+  @include transition($property 250ms ease-in-out);
+}
+
+/* Animations */
+
 @include keyframes(fade-in) {
   from { @include opacity(0); }
     to { @include opacity(1); }
+}
+
+@include keyframes(scale-in) {
+    0% { transform: scale(1.5, 1.5); }
+  100% { transform: scale(1, 1); }
 }

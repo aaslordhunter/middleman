@@ -1,10 +1,10 @@
 #about.js-anchor
-  %header.bg-coral.white-text
+  %header.bg-primary.white-text
     .wrap
       .hide-mobile
         = partial 'header_logo'
       %h1= t :header_title
-      %h2
+      %h4
         = t :header_subtitle
         = link_to 'LevelUp', 'https://www.thelevelup.com/', target: '_blank', class: 'text-link'
       = link_to t(:header_cta), void, class: 'button js-contact-button'
@@ -13,5 +13,5 @@
     .wrap
       = image_tag 'bio_image.png', class: 'bio-image'
       %h1= t :about_title
-      .emdash-gold
+      .emdash-secondary
       %p= t :about_description

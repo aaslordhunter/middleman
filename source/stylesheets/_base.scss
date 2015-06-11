@@ -13,8 +13,8 @@ a {
 
 body {
   background: #F8F8F8;
-  color: #333;
-  font-family: $open-sans;
+  color: $dark-gray;
+  font-family: $futura;
   font-style: normal;
   font-weight: 400;
   text-align: center;
@@ -27,29 +27,38 @@ footer {
 }
 
 h1 {
-  font-family: $futura;
   font-size: em(50);
   font-weight: 700;
 }
 
 h2 {
-  font-size: em(24);
-  font-weight: 600;
-  margin-top: 1em;
-}
-
-h3 {
-  font-family: $futura;
   font-size: em(36);
+  font-weight: 700;
   line-height: em(54, 36);
 }
 
+h3 {
+  font-size: em(36);
+  font-weight: 500;
+}
+
+h4 {
+  font-size: em(24);
+  font-weight: 500;
+  margin-top: 1em;
+}
+
 header {
-  background: $coral;
+  background: $primary;
 }
 
 header, section {
   padding: em(150) 0;
+}
+
+img {
+  display: block;
+  width: 100%;
 }
 
 main {
@@ -59,14 +68,15 @@ main {
 
 nav {
   @include size(150px 100%);
-  background: #333;
+  background: $dark-gray;
   position: fixed;
 }
 
 p {
   color: #555;
-  font-size: em(24);
-  line-height: em(40, 24);
+  font-size: em(30);
+  font-weight: 400;
+  line-height: em(50, 30);
   padding: 0 18%;
 }
 
@@ -81,5 +91,5 @@ small {
 
 ::selection {
   color: #FFF;
-  background: $gold;
+  background: $secondary;
 }

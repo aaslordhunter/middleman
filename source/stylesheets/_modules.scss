@@ -1,8 +1,8 @@
 @import 'bourbon';
 @import '_elements';
 
-.bg-coral {
-  background-color: $coral;
+.bg-primary {
+  background-color: $primary;
 }
 
 .bg-gray {
@@ -37,11 +37,11 @@
 }
 
 .button {
-  @include transition(background 200ms ease-in-out);
-  background: $gold;
+  @include trans(background);
+  background: $secondary;
   border-top: none;
-  border-bottom: 2px solid $dark-coral;
-  color: #222;
+  border-bottom: 2px solid $primary-shade;
+  color: $dark-gray;
   display: inline-block;
   font-family: $open-sans;
   font-size: em(14);
@@ -54,33 +54,34 @@
   }
 
   &:active {
-    border-top: 2px solid $coral;
+    border-top: 2px solid $primary;
     border-bottom: none;
   }
 }
 
-.emdash-dark-coral:before {
+.emdash-primary-shade:before {
   @include emdash;
-  color: $dark-coral;
+  color: $primary-shade;
 }
 
-.emdash-gold:before {
+.emdash-secondary:before {
   @include emdash;
-  color: $gold;
+  color: $secondary;
 }
 
 .fa {
-  color: $gold;
+  color: $secondary;
   font-size: em(30);
   margin-bottom: 1em;
 }
 
 .header-logo {
+  @include animation(scale-in 1s ease-in-out);
   margin-bottom: em(50);
   width: 100px;
 
   path {
-    fill: $gold;
+    fill: $secondary;
   }
 
   text {
@@ -100,20 +101,21 @@
 }
 
 .nav-item {
+  @include trans(all);
   border-right: 5px solid rgba(0, 0, 0, 0);
-  padding: em(10) em(25) em(10) 0;
+  padding: em(15) em(25) em(15) 0;
 
   &.active {
-    border-right: 5px solid $gold;
+    border-right: 5px solid $secondary;
   }
 }
 
 .nav-link {
-  @include transition(all 250ms ease-in-out);
+  @include trans(all);
   color: #777;
   display: inline-block;
   font-family: $open-sans;
-  font-size: em(14);
+  font-size: em(16);
   font-weight: 600;
 
   &.active, &:hover {
@@ -126,36 +128,36 @@
   width: 150px;
 
   path {
-    @include transition(fill 200ms ease-in-out);
-    fill: #333;
+    @include trans(fill);
+    fill: $dark-gray;
   }
 
   text {
-    @include transition(fill 200ms ease-in-out);
+    @include trans(fill);
     @include orator;
-    fill: $gold;
+    fill: $secondary;
     font-size: 30px;
   }
 
   &:hover {
     path {
-      fill: $gold;
+      fill: $secondary;
     }
 
     text {
-      fill: #333;
+      fill: $dark-gray;
     }
   }
 }
 
-.project-image {
-  display: block;
-  width: 100%;
+.not-browser {
+  border-radius: 3px;
+  overflow: hidden;
 }
 
 .text-link {
-  @include transition(all 250ms ease-in-out);
-  border-bottom: 2px solid $gold;
+  @include trans(all);
+  border-bottom: 2px solid $secondary;
   color: inherit;
 
   &:hover {
