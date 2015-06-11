@@ -83,6 +83,10 @@
     font-size: em(18);
   }
 
+  h5 {
+    margin-top: 1em;
+  }
+
   header,
   section {
     padding: em(50) 0;
@@ -96,6 +100,10 @@
     font-size: em(20);
     line-height: em(36, 24);
     padding: 0;
+  }
+
+  .browser {
+    margin-top: em(30);
   }
 
   .emdash-primary-shade:before,
