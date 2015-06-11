@@ -14,8 +14,8 @@
     right: auto;
   }
 
-  header, section {
-    padding: em(230) 0 em(150) 0;
+  main {
+    @include opacity(1);
   }
 
   nav {
@@ -126,6 +126,17 @@
 @media only screen and (max-device-width: 600px) {
   a {
     -webkit-tap-highlight-color: rgba(255, 197, 41, .8);
+  }
+
+  .button {
+    &:hover {
+      background: $secondary;
+    }
+
+    &:active {
+      border-top: none;
+      border-bottom: 2px solid $primary-shade;
+    }
   }
 
   .text-link {

@@ -25,7 +25,7 @@ module CustomHelpers
   end
 
   def resume_url
-    'aas_resume_2014.pdf'
+    'aas_resume_2015.pdf'
   end
 
   def section_link(section_name)
