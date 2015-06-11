@@ -14,10 +14,6 @@
     right: auto;
   }
 
-  main {
-    @include opacity(1);
-  }
-
   nav {
     @include size(100% auto);
     background: rgba(51, 51, 51, .92);
@@ -72,11 +68,15 @@
 
 @media only screen and (max-width: 600px) {
   h1 {
-    font-size: em(32);
+    font-size: em(24);
   }
 
-  h2, h3 {
+  h2 {
     font-size: em(24);
+  }
+
+  h3 {
+    font-size: em(22);
   }
 
   h4 {
@@ -88,14 +88,12 @@
     padding: em(50) 0;
   }
 
-  nav {
-    background: $primary;
-    border-top: 3px solid $secondary;
-    position: relative;
+  main {
+    border-top: 10px solid $secondary;
   }
 
   p {
-    font-size: em(24);
+    font-size: em(20);
     line-height: em(36, 24);
     padding: 0;
   }
@@ -111,15 +109,6 @@
 
   .hide-web {
     display: block;
-  }
-
-  .nav-logo {
-    margin: 0 auto;
-    width: 70px;
-  }
-
-  .nav-inner {
-    display: none;
   }
 }
 

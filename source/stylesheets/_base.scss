@@ -56,11 +56,6 @@ h5 {
   margin-top: em(28, 16);
 }
 
-h6 {
-  @include orator;
-  font-size: em(24);
-}
-
 header {
   background: $primary;
 }
