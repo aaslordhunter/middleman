@@ -1,14 +1,12 @@
 .project
   .emdash-secondary
   %h3= title
+  %h5= date
 
-  - if browser
+  - images.each do |image|
     %figure.browser
       .browser-header
         .browser-button
         .browser-button
         .browser-button
-      = image_tag image_url
-  - else
-    %figure.not-browser
-      = image_tag image_url
+      = image_tag image

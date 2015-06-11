@@ -150,11 +150,6 @@
   }
 }
 
-.not-browser {
-  border-radius: 3px;
-  overflow: hidden;
-}
-
 .text-link {
   @include trans(all);
   border-bottom: 2px solid $secondary;

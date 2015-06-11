@@ -48,6 +48,14 @@ h4 {
   margin-top: 1em;
 }
 
+h5 {
+  color: #BBB;
+  font-size: em(16);
+  font-weight: 700;
+  letter-spacing: 6px;
+  margin-top: em(28, 16);
+}
+
 header {
   background: $primary;
 }
