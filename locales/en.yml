@@ -26,6 +26,21 @@ en:
   project_claim_pages_date:
     2015
 
+  project_dashboard_beacons_title:
+    Beacon Message UI
+  project_dashboard_beacons_date:
+    2014
+
+  project_dashboard_receipt_notifications_title:
+    Receipt Notice UI
+  project_dashboard_receipt_notifications_date:
+    2014
+
+  project_merchant_dashboard_app_title:
+    Merchant App 2.0
+  project_merchant_dashboard_app_date:
+    2014
+
   footer_copyright:
     "&copy; 2015 Alexandra Flynn Aas"
   footer_middleman:

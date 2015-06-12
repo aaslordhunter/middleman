@@ -3,6 +3,20 @@
     .wrap
       %h1= t :projects_title
 
-      = partial 'project', locals: { title: t(:project_claim_pages_title),
+      = partial 'project_browser', locals: { title: t(:project_claim_pages_title),
         date: t(:project_claim_pages_date),
         images: ['cohorts_show.png', 'cohorts_show_error.png', 'cohorts_show_map.png'] }
+
+      = partial 'project_generic', locals: { title: t(:project_merchant_dashboard_app_title),
+        date: t(:project_merchant_dashboard_app_date),
+        images: ['merchant_dashboard_app.png'] }
+
+      = partial 'project_browser', locals: { title: t(:project_dashboard_beacons_title),
+        date: t(:project_dashboard_beacons_date),
+        images: ['dashboard_beacons_index.png', 'dashboard_beacons_edit.png'] }
+
+      = partial 'project_browser', locals: { title: t(:project_dashboard_receipt_notifications_title),
+        date: t(:project_dashboard_receipt_notifications_date),
+        images: ['dashboard_receipt_notifications_index.png',
+          'dashboard_receipt_notifications_index_delete.png',
+          'dashboard_receipt_notifications_edit.png'] }
