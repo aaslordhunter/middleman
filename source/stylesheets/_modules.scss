@@ -69,12 +69,6 @@
   color: $secondary;
 }
 
-.fa {
-  color: $secondary;
-  font-size: em(30);
-  margin-bottom: 1em;
-}
-
 .header-logo {
   @include animation(scale-in 1s ease-in-out);
   margin-bottom: em(50);
