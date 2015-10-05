@@ -4,7 +4,7 @@ module CustomHelpers
   end
 
   def email_address
-    'ali@ali-aas.com'
+    'aas.alexandra@gmail.com'
   end
 
   def google_fonts_stylesheet_link_tag(family)
