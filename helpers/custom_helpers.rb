@@ -11,10 +11,6 @@ module CustomHelpers
     stylesheet_link_tag "https://fonts.googleapis.com/css?family=#{family}"
   end
 
-  def linkedin_url
-    'https://www.linkedin.com/in/aliflynnaas'
-  end
-
   def google_javascript_include_tag(path, version, filename = nil)
     href = 'https://ajax.googleapis.com/ajax/libs/%s/%s/%s.min.js'
     javascript_include_tag href % [path, version, filename || path]
