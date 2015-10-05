@@ -3,10 +3,6 @@ module CustomHelpers
     '//netdna.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.css'
   end
 
-  def email_address
-    'aas.alexandra@gmail.com'
-  end
-
   def google_fonts_stylesheet_link_tag(family)
     stylesheet_link_tag "https://fonts.googleapis.com/css?family=#{family}"
   end
