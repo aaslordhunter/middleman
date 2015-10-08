@@ -16,9 +16,7 @@ module CustomHelpers
     javascript_include_tag href % [path, version, filename || path]
   end
 
-  def repo_url
-    'https://github.com/aaslordhunter/middleman'
-  end
+
 
   def resume_url
     'aas_resume_2015.pdf'
