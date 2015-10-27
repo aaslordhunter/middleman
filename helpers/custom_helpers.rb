@@ -4,21 +4,7 @@ module CustomHelpers
   end
 
   def email_address
-    'ali@thoughtbot.com'
-  end
-
-  def google_fonts_stylesheet_link_tag(family)
-    stylesheet_link_tag "https://fonts.googleapis.com/css?family=#{family}"
-  end
-
-  def google_javascript_include_tag(path, version, filename = nil)
-    href = 'https://ajax.googleapis.com/ajax/libs/%s/%s/%s.min.js'
-    javascript_include_tag href % [path, version, filename || path]
-  end
-
-  def repo_url
-    'https://github.com/aaslordhunter/middleman'
-  end
+    'ali@thoughtbot.
 
   def resume_url
     'aas_resume_2015.pdf'
