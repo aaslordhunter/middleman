@@ -17,7 +17,7 @@ engines:
 # to turn off an engine, set enabled to `false` or remove it
   rubocop:
     enabled: true
-  csslint:
+  csslintt:
     enabled: true
   eslint:
     enabled: true
